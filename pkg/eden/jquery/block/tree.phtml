@@ -1,0 +1,54 @@
+<?php if($start): ?>
+<div class="eve-block-tree ui-widget ui-corner-all">
+	<div class="eve-block-tree-head ui-state-default ui-helper-clearfix">
+		<span class="ui-state-disabled ui-corner-all eve-block-tree-action eve-block-tree-action-remove">
+			<a class="ui-icon ui-icon-trash" href="#remove">Remove</a>
+		</span>
+		
+		<span class="eve-block-tree-separator"></span>
+		
+		<?php foreach($types as $name => $type): ?>
+		<span class="ui-state-disabled ui-corner-all eve-block-tree-action eve-block-tree-action-add">
+			<a title="Add <?php echo $name; ?>" rel="<?php echo $name; ?>" class="ui-icon <?php echo $type['close']; ?>" 
+			href="#add-<?php echo $name; ?>">Add <?php echo $name; ?></a>
+		</span>
+		<?php endforeach; ?>
+		
+		<span class="eve-block-tree-separator"></span>
+		
+		<span class="ui-state-disabled ui-corner-all eve-block-tree-action eve-block-tree-action-edit">
+			<a class="ui-icon ui-icon-pencil" href="#edit">Edit</a>
+		</span>
+		
+		<span class="ui-state-disabled ui-corner-all eve-block-tree-action eve-block-tree-action-save">
+			<a class="ui-icon ui-icon-disk" href="#save">Save</a>
+		</span>
+		<span class="ui-state-disabled ui-corner-all eve-block-tree-action eve-block-tree-action-cancel">
+			<a class="ui-icon ui-icon-cancel" href="#cancel">Cancel</a>
+		</span>
+	</div>
+	<div class="eve-block-tree-body ui-widget-content">
+		<?php include(dirname(__FILE__).'/tree/list.phtml'); ?>
+	</div>
+	
+	<ul class="eve-block-tree-clone">
+		<?php foreach($types as $name => $type): ?>
+		<li title="" class="eve-block-tree-new <?php echo $name; ?> <?php echo $type['open'] ? 'eve-block-tree-branch':'eve-block-tree-leaf'; ?>">
+			<div class="eve-block-tree-item ui-state-default ui-helper-clearfix">
+				<span class="eve-block-tree-icon ui-icon <?php echo $type['open'] ? $type['open'] : $type['close']; ?>"></span>
+				<a rel="<?php echo $name; ?>" class="eve-block-tree-label" href="#"></a>
+				<input class="eve-block-tree-field" value="" />
+			</div>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+</div>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<link rel="stylesheet" type="text/css" href="/assets/jquery/block/tree.css" />
+<script type="text/javascript" src="/assets/jquery/block/tree.js"></script>
+<?php endif; ?>
+<script type="text/javascript">jQuery('div.eve-block-tree').not('.eve-block-loaded').addClass('eve-block-loaded').tree(<?php echo json_encode($types); ?>, <?php echo json_encode($options); ?>);</script>
+<?php else: ?>
+<?php include(dirname(__FILE__).'/tree/list.phtml'); ?>
+<?php endif; ?>

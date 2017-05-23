@@ -1,0 +1,568 @@
+Google_Service_Drive	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^class Google_Service_Drive extends Google_Service$/;"	class	line:34
+about	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $about;$/;"	variable	line:61
+changes	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $changes;$/;"	variable	line:62
+channels	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $channels;$/;"	variable	line:63
+comments	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $comments;$/;"	variable	line:64
+files	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $files;$/;"	variable	line:65
+permissions	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $permissions;$/;"	variable	line:66
+replies	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $replies;$/;"	variable	line:67
+revisions	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $revisions;$/;"	variable	line:68
+teamdrives	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public $teamdrives;$/;"	variable	line:69
+__construct	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^  public function __construct(Google_Client $client)$/;"	function	line:76
+rootUrl	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->rootUrl = 'https:\/\/www.googleapis.com\/';$/;"	variable	line:79
+servicePath	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->servicePath = 'drive\/v3\/';$/;"	variable	line:80
+version	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->version = 'v3';$/;"	variable	line:81
+serviceName	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->serviceName = 'drive';$/;"	variable	line:82
+about	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->about = new Google_Service_Drive_Resource_About($/;"	variable	line:84
+changes	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->changes = new Google_Service_Drive_Resource_Changes($/;"	variable	line:98
+channels	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->channels = new Google_Service_Drive_Resource_Channels($/;"	variable	line:205
+comments	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->comments = new Google_Service_Drive_Resource_Comments($/;"	variable	line:219
+files	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->files = new Google_Service_Drive_Resource_Files($/;"	variable	line:314
+permissions	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->permissions = new Google_Service_Drive_Resource_Permissions($/;"	variable	line:536
+replies	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->replies = new Google_Service_Drive_Resource_Replies($/;"	variable	line:659
+revisions	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->revisions = new Google_Service_Drive_Resource_Revisions($/;"	variable	line:775
+teamdrives	/Users/haru/php/kbtitPHP/src/google-api-php-client-services/src/Google/Service/Drive.php	/^    $this->teamdrives = new Google_Service_Drive_Resource_Teamdrives($/;"	variable	line:852
+client	/Users/haru/php/kbtitPHP/app/list.php	/^$client = new Google_Client();$/;"	variable	line:9
+drive	/Users/haru/php/kbtitPHP/app/list.php	/^$drive = new Google_Sevice_Drive($client);$/;"	variable	line:20
+list_opt	/Users/haru/php/kbtitPHP/app/list.php	/^$list_opt = [$/;"	variable	line:23
+files	/Users/haru/php/kbtitPHP/app/list.php	/^$files = $drive->files;$/;"	variable	line:29
+list	/Users/haru/php/kbtitPHP/app/list.php	/^$list = $files->listFiles($list_opt);$/;"	variable	line:30
+items	/Users/haru/php/kbtitPHP/app/list.php	/^$items = $list->getItems();$/;"	variable	line:33
+file_id	/Users/haru/php/kbtitPHP/app/list.php	/^  $file_id = $file->getId();$/;"	variable	line:35
+file_id	/Users/haru/php/kbtitPHP/app/file.php	/^$file_id = $_GET['file_id'];$/;"	variable	line:4
+file	/Users/haru/php/kbtitPHP/app/file.php	/^$file = $drive->files->get($file_id);$/;"	variable	line:5
+url	/Users/haru/php/kbtitPHP/app/file.php	/^$url = $file->getDownloadUrl();$/;"	variable	line:7
+request	/Users/haru/php/kbtitPHP/app/file.php	/^  $request = new Google_Http_Request($url, 'GET', null, null);$/;"	variable	line:10
+auth	/Users/haru/php/kbtitPHP/app/file.php	/^  $auth = $client->getAuth();$/;"	variable	line:11
+httpRequest	/Users/haru/php/kbtitPHP/app/file.php	/^  $httpRequest = $auth->authenticatedRequest($request);$/;"	variable	line:12
+url	/Users/haru/php/kbtitPHP/app/file.php	/^  $url = $file->getAlternateLink();$/;"	variable	line:23
+file	/Users/haru/php/kbtitPHP/app/create.php	/^$file = new Google_Service_Drive_DriveFile();$/;"	variable	line:4
+createdFile	/Users/haru/php/kbtitPHP/app/create.php	/^$createdFile = $drive->files->insert($file,[$/;"	variable	line:9
+file_id	/Users/haru/php/kbtitPHP/app/create.php	/^$file_id = $_POST['file_id'];$/;"	variable	line:16
+gmap	/Users/haru/php/kbtitPHP/app/map.php	/^$gmap = new GoogleMapAPI();$/;"	variable	line:6
+client	/Users/haru/php/repeat/work.php	/^$client = new Google_client();$/;"	variable	line:6
+authUrl	/Users/haru/php/repeat/work.php	/^    $authUrl = $client->createAuthUrl();$/;"	variable	line:18
+Google_Service	/Users/haru/php/kbtitPHP/src/google2/google-api-php-client/src/service/Google_Service.php	/^class Google_Service {$/;"	class	line:17
+version	/Users/haru/php/kbtitPHP/src/google2/google-api-php-client/src/service/Google_Service.php	/^  public $version;$/;"	variable	line:18
+servicePath	/Users/haru/php/kbtitPHP/src/google2/google-api-php-client/src/service/Google_Service.php	/^  public $servicePath;$/;"	variable	line:19
+resource	/Users/haru/php/kbtitPHP/src/google2/google-api-php-client/src/service/Google_Service.php	/^  public $resource;$/;"	variable	line:20
+Google_Service_Calendar	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^class Google_Service_Calendar extends Google_Service$/;"	class	line:32
+acl	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $acl;$/;"	variable	line:41
+calendarList	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $calendarList;$/;"	variable	line:42
+calendars	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $calendars;$/;"	variable	line:43
+channels	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $channels;$/;"	variable	line:44
+colors	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $colors;$/;"	variable	line:45
+events	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $events;$/;"	variable	line:46
+freebusy	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $freebusy;$/;"	variable	line:47
+settings	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public $settings;$/;"	variable	line:48
+__construct	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^  public function __construct(Google_Client $client)$/;"	function	line:55
+rootUrl	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->rootUrl = 'https:\/\/www.googleapis.com\/';$/;"	variable	line:58
+servicePath	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->servicePath = 'calendar\/v3\/';$/;"	variable	line:59
+version	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->version = 'v3';$/;"	variable	line:60
+serviceName	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->serviceName = 'calendar';$/;"	variable	line:61
+acl	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->acl = new Google_Service_Calendar_Resource_Acl($/;"	variable	line:63
+calendarList	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->calendarList = new Google_Service_Calendar_Resource_CalendarList($/;"	variable	line:195
+calendars	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->calendars = new Google_Service_Calendar_Resource_Calendars($/;"	variable	line:320
+channels	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->channels = new Google_Service_Calendar_Resource_Channels($/;"	variable	line:384
+colors	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->colors = new Google_Service_Calendar_Resource_Colors($/;"	variable	line:398
+events	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->events = new Google_Service_Calendar_Resource_Events($/;"	variable	line:412
+freebusy	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->freebusy = new Google_Service_Calendar_Resource_Freebusy($/;"	variable	line:820
+settings	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Calendar.php	/^    $this->settings = new Google_Service_Calendar_Resource_Settings($/;"	variable	line:834
+Google_Service_Oauth2	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^class Google_Service_Oauth2 extends Google_Service$/;"	class	line:32
+userinfo	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^  public $userinfo;$/;"	variable	line:47
+userinfo_v2_me	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^  public $userinfo_v2_me;$/;"	variable	line:48
+base_methods	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^  private $base_methods;$/;"	variable	line:49
+__construct	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^  public function __construct(Google_Client $client)$/;"	function	line:55
+rootUrl	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->rootUrl = 'https:\/\/www.googleapis.com\/';$/;"	variable	line:58
+servicePath	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->servicePath = '';$/;"	variable	line:59
+version	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->version = 'v2';$/;"	variable	line:60
+serviceName	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->serviceName = 'oauth2';$/;"	variable	line:61
+userinfo	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->userinfo = new Google_Service_Oauth2_Resource_Userinfo($/;"	variable	line:63
+userinfo_v2_me	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->userinfo_v2_me = new Google_Service_Oauth2_Resource_UserinfoV2Me($/;"	variable	line:77
+base_methods	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $this->base_methods = new Google_Service_Resource($/;"	variable	line:91
+getCertForOpenIdConnect	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^  public function getCertForOpenIdConnect($optParams = array())$/;"	function	line:129
+params	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $params = array();$/;"	variable	line:131
+params	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $params = array_merge($params, $optParams);$/;"	variable	line:132
+tokeninfo	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^  public function tokeninfo($optParams = array())$/;"	function	line:145
+params	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $params = array();$/;"	variable	line:147
+params	/Users/haru/php/kbtitPHP/src/google3/src/Google/Service/Oauth2.php	/^    $params = array_merge($params, $optParams);$/;"	variable	line:148
+Google_Client	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^class Google_Client$/;"	class	line:40
+auth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $auth;$/;"	variable	line:52
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $http;$/;"	variable	line:57
+cache	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $cache;$/;"	variable	line:62
+token	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $token;$/;"	variable	line:67
+config	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $config;$/;"	variable	line:72
+logger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $logger;$/;"	variable	line:77
+deferExecution	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $deferExecution = false;$/;"	variable	line:82
+deferExecution	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private $deferExecution = false;$/;"	variable	line:82
+requestedScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected $requestedScopes = [];$/;"	variable	line:86
+requestedScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected $requestedScopes = [];$/;"	variable	line:86
+__construct	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function __construct(array $config = array())$/;"	function	line:93
+config	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function __construct(array $config = array())$/;"	variable	line:93
+config	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->config = array_merge($/;"	variable	line:95
+to	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^          \/\/ function to be called when an access token is fetched$/;"	function	line:138
+used	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^          \/\/ Service class used in Google_Client::verifyIdToken.$/;"	class	line:142
+getLibraryVersion	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getLibraryVersion()$/;"	function	line:155
+authenticate	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function authenticate($code)$/;"	function	line:168
+fetchAccessTokenWithAuthCode	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function fetchAccessTokenWithAuthCode($code)$/;"	function	line:180
+auth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $auth = $this->getOAuth2Service();$/;"	variable	line:186
+httpHandler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $httpHandler = HttpHandlerFactory::build($this->getHttpClient());$/;"	variable	line:190
+creds	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $creds = $auth->fetchAuthToken($httpHandler);$/;"	variable	line:191
+refreshTokenWithAssertion	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function refreshTokenWithAssertion()$/;"	function	line:207
+fetchAccessTokenWithAssertion	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function fetchAccessTokenWithAssertion(ClientInterface $authHttp = null)$/;"	function	line:217
+authHttp	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function fetchAccessTokenWithAssertion(ClientInterface $authHttp = null)$/;"	variable	line:217
+credentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $credentials = $this->createApplicationDefaultCredentials();$/;"	variable	line:234
+httpHandler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $httpHandler = HttpHandlerFactory::build($authHttp);$/;"	variable	line:236
+creds	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $creds = $credentials->fetchAuthToken($httpHandler);$/;"	variable	line:237
+refreshToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function refreshToken($refreshToken)$/;"	function	line:253
+fetchAccessTokenWithRefreshToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function fetchAccessTokenWithRefreshToken($refreshToken = null)$/;"	function	line:263
+refreshToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $refreshToken = $this->token['refresh_token'];$/;"	variable	line:271
+auth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $auth = $this->getOAuth2Service();$/;"	variable	line:274
+httpHandler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $httpHandler = HttpHandlerFactory::build($this->getHttpClient());$/;"	variable	line:277
+creds	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $creds = $auth->fetchAuthToken($httpHandler);$/;"	variable	line:278
+createAuthUrl	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function createAuthUrl($scope = null)$/;"	function	line:297
+scope	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $scope = $this->prepareScopes();$/;"	variable	line:300
+scope	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $scope = implode(' ', $scope);$/;"	variable	line:303
+approvalPrompt	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $approvalPrompt = $this->config['prompt']$/;"	variable	line:307
+includeGrantedScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $includeGrantedScopes = $this->config['include_granted_scopes'] === null$/;"	variable	line:312
+params	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $params = array_filter($/;"	variable	line:316
+rva	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $rva = $this->config['request_visible_actions'];$/;"	variable	line:333
+auth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $auth = $this->getOAuth2Service();$/;"	variable	line:338
+authorize	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function authorize(ClientInterface $http = null)$/;"	function	line:350
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function authorize(ClientInterface $http = null)$/;"	variable	line:350
+credentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $credentials = null;$/;"	variable	line:352
+token	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $token = null;$/;"	variable	line:353
+scopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $scopes = null;$/;"	variable	line:354
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $http = $this->getHttpClient();$/;"	variable	line:356
+credentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $credentials = $this->createApplicationDefaultCredentials();$/;"	variable	line:365
+scopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $scopes = $this->prepareScopes();$/;"	variable	line:367
+credentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        $credentials = $this->createUserRefreshCredentials($/;"	variable	line:370
+authHandler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $authHandler = $this->getAuthHandler();$/;"	variable	line:377
+callback	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $callback = $this->config['token_callback'];$/;"	variable	line:380
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $http = $authHandler->attachCredentials($http, $credentials, $callback);$/;"	variable	line:381
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $http = $authHandler->attachToken($http, $token, (array) $scopes);$/;"	variable	line:383
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $http = $authHandler->attachKey($http, $key);$/;"	variable	line:385
+useApplicationDefaultCredentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function useApplicationDefaultCredentials($useAppCreds = true)$/;"	function	line:398
+isUsingApplicationDefaultCredentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function isUsingApplicationDefaultCredentials()$/;"	function	line:409
+setAccessToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setAccessToken($token)$/;"	function	line:418
+token	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        $token = $json;$/;"	variable	line:422
+token	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        $token = array($/;"	variable	line:425
+token	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->token = $token;$/;"	variable	line:436
+getAccessToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getAccessToken()$/;"	function	line:439
+getRefreshToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getRefreshToken()$/;"	function	line:444
+isAccessTokenExpired	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function isAccessTokenExpired()$/;"	function	line:455
+created	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $created = 0;$/;"	variable	line:461
+created	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $created = $this->token['created'];$/;"	variable	line:463
+idToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $idToken = $this->token['id_token'];$/;"	variable	line:469
+parts	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        $parts = explode('.', $idToken);$/;"	variable	line:471
+payload	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        $payload = json_decode(base64_decode($parts[1]), true);$/;"	variable	line:472
+created	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^          $created = $payload['iat'];$/;"	variable	line:474
+getAuth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getAuth()$/;"	function	line:483
+no	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        'This function no longer exists. See UPGRADING.md for more information'$/;"	function	line:486
+setAuth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setAuth($auth)$/;"	function	line:490
+no	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^        'This function no longer exists. See UPGRADING.md for more information'$/;"	function	line:493
+setClientId	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setClientId($clientId)$/;"	function	line:501
+getClientId	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getClientId()$/;"	function	line:506
+setClientSecret	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setClientSecret($clientSecret)$/;"	function	line:515
+getClientSecret	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getClientSecret()$/;"	function	line:520
+setRedirectUri	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setRedirectUri($redirectUri)$/;"	function	line:529
+getRedirectUri	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getRedirectUri()$/;"	function	line:534
+setState	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setState($state)$/;"	function	line:544
+setAccessType	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setAccessType($accessType)$/;"	function	line:554
+setApprovalPrompt	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setApprovalPrompt($approvalPrompt)$/;"	function	line:564
+setLoginHint	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setLoginHint($loginHint)$/;"	function	line:573
+setApplicationName	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setApplicationName($applicationName)$/;"	function	line:582
+setRequestVisibleActions	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setRequestVisibleActions($requestVisibleActions)$/;"	function	line:595
+requestVisibleActions	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $requestVisibleActions = implode(" ", $requestVisibleActions);$/;"	variable	line:598
+setDeveloperKey	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setDeveloperKey($developerKey)$/;"	function	line:608
+setHostedDomain	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setHostedDomain($hd)$/;"	function	line:619
+setPrompt	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setPrompt($prompt)$/;"	function	line:630
+setOpenidRealm	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setOpenidRealm($realm)$/;"	function	line:641
+setIncludeGrantedScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setIncludeGrantedScopes($include)$/;"	function	line:652
+to	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^   * sets function to be called when an access token is fetched$/;"	function	line:658
+setTokenCallback	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setTokenCallback(callable $tokenCallback)$/;"	function	line:661
+revokeToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function revokeToken($token = null)$/;"	function	line:673
+tokenRevoker	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $tokenRevoker = new Google_AccessToken_Revoke($/;"	variable	line:675
+verifyIdToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function verifyIdToken($idToken = null)$/;"	function	line:691
+tokenVerifier	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $tokenVerifier = new Google_AccessToken_Verify($/;"	variable	line:693
+token	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $token = $this->getAccessToken();$/;"	variable	line:700
+idToken	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $idToken = $token['id_token'];$/;"	variable	line:706
+setScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setScopes($scopes)$/;"	function	line:721
+requestedScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->requestedScopes = array();$/;"	variable	line:723
+addScope	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function addScope($scope_or_scopes)$/;"	function	line:734
+getScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getScopes()$/;"	function	line:750
+prepareScopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function prepareScopes()$/;"	function	line:759
+or	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^   * @return object of the type of the expected class or Psr\\Http\\Message\\ResponseInterface.$/;"	class	line:773
+execute	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function execute(RequestInterface $request, $expectedClass = null)$/;"	function	line:775
+expectedClass	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function execute(RequestInterface $request, $expectedClass = null)$/;"	variable	line:775
+request	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $request = $request->withHeader($/;"	variable	line:777
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $http = $this->authorize();$/;"	variable	line:786
+setUseBatch	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setUseBatch($useBatch)$/;"	function	line:798
+isAppEngine	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function isAppEngine()$/;"	function	line:808
+setConfig	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setConfig($name, $value)$/;"	function	line:814
+getConfig	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getConfig($name, $default = null)$/;"	function	line:819
+default	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getConfig($name, $default = null)$/;"	variable	line:819
+setAuthConfigFile	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setAuthConfigFile($file)$/;"	function	line:832
+setAuthConfig	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setAuthConfig($config)$/;"	function	line:845
+json	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $json = file_get_contents($config);$/;"	variable	line:852
+key	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $key = isset($config['installed']) ? 'installed' : 'web';$/;"	variable	line:859
+setSubject	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setSubject($subject)$/;"	function	line:891
+setDefer	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setDefer($defer)$/;"	function	line:902
+deferExecution	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->deferExecution = $defer;$/;"	variable	line:904
+shouldDefer	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function shouldDefer()$/;"	function	line:911
+getOAuth2Service	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getOAuth2Service()$/;"	function	line:919
+auth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $this->auth = $this->createOAuth2Service();$/;"	variable	line:922
+createOAuth2Service	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected function createOAuth2Service()$/;"	function	line:931
+auth	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $auth = new OAuth2($/;"	variable	line:934
+setCache	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setCache(CacheItemPoolInterface $cache)$/;"	function	line:954
+cache	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->cache = $cache;$/;"	variable	line:956
+getCache	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getCache()$/;"	function	line:962
+cache	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $this->cache = $this->createDefaultCache();$/;"	variable	line:965
+setCacheConfig	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setCacheConfig(array $cacheConfig)$/;"	function	line:974
+setLogger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setLogger(LoggerInterface $logger)$/;"	function	line:983
+logger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->logger = $logger;$/;"	variable	line:985
+getLogger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getLogger()$/;"	function	line:991
+logger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $this->logger = $this->createDefaultLogger();$/;"	variable	line:994
+createDefaultLogger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected function createDefaultLogger()$/;"	function	line:1000
+logger	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $logger = new Logger('google-api-php-client');$/;"	variable	line:1002
+handler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $handler = new MonologSyslogHandler('app', LOG_USER, Logger::NOTICE);$/;"	variable	line:1004
+handler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $handler = new MonologStreamHandler('php:\/\/stderr', Logger::NOTICE);$/;"	variable	line:1006
+createDefaultCache	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected function createDefaultCache()$/;"	function	line:1013
+setHttpClient	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function setHttpClient(ClientInterface $http)$/;"	function	line:1022
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $this->http = $http;$/;"	variable	line:1024
+getHttpClient	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  public function getHttpClient()$/;"	function	line:1030
+http	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $this->http = $this->createDefaultHttpClient();$/;"	variable	line:1033
+createDefaultHttpClient	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected function createDefaultHttpClient()$/;"	function	line:1039
+options	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $options = ['exceptions' => false];$/;"	variable	line:1041
+version	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $version = ClientInterface::VERSION;$/;"	variable	line:1043
+options	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $options = [$/;"	variable	line:1045
+createApplicationDefaultCredentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private function createApplicationDefaultCredentials()$/;"	function	line:1062
+scopes	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $scopes = $this->prepareScopes();$/;"	variable	line:1064
+sub	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $sub = $this->config['subject'];$/;"	variable	line:1065
+signingKey	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $signingKey = $this->config['signing_key'];$/;"	variable	line:1066
+serviceAccountCredentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $serviceAccountCredentials = array($/;"	variable	line:1070
+credentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $credentials = CredentialsLoader::makeCredentials($scopes, $serviceAccountCredentials);$/;"	variable	line:1076
+credentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^      $credentials = ApplicationDefaultCredentials::getCredentials($scopes);$/;"	variable	line:1078
+getAuthHandler	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  protected function getAuthHandler()$/;"	function	line:1094
+createUserRefreshCredentials	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^  private function createUserRefreshCredentials($scope, $refreshToken)$/;"	function	line:1107
+creds	/Users/haru/php/kbtitPHP/src/Google/Client.php	/^    $creds = array_filter($/;"	variable	line:1109
+html	/Users/haru/php/kbtitPHP/app/work.html	/^<html>$/;"	function	line:2
+head	/Users/haru/php/kbtitPHP/app/work.html	/^  <head>$/;"	function	line:3
+meta	/Users/haru/php/kbtitPHP/app/work.html	/^    <meta charset="utf-8">$/;"	function	line:4
+meta	/Users/haru/php/kbtitPHP/app/work.html	/^        	    <meta name='viewport' content='initial-scale=1.0, user-scalable=no' \/>$/;"	function	line:7
+script	/Users/haru/php/kbtitPHP/app/work.html	/^        	<script type='text\/javascript' src='\/\/maps.google.com\/maps\/api\/js?sensor=true'><\/script>    <script type="text\/javascript" charset="utf-8">$/;"	function	line:8
+createMarker	/Users/haru/php/kbtitPHP/app/work.html	/^function createMarker(map,point,title,html,icon,icon_shadow,sidebar_id,openers){var marker_options={position:point,map:map,title:title};if(icon!=''){marker_options.icon=icon;}$/;"	function	line:20
+isArray	/Users/haru/php/kbtitPHP/app/work.html	/^function isArray(a){return isObject(a)&&a.constructor==Array;}$/;"	function	line:25
+isObject	/Users/haru/php/kbtitPHP/app/work.html	/^function isObject(a){return(a&&typeof a=='object')||isFunction(a);}$/;"	function	line:26
+isFunction	/Users/haru/php/kbtitPHP/app/work.html	/^function isFunction(a){return typeof a=='function';}$/;"	function	line:27
+isEmpty	/Users/haru/php/kbtitPHP/app/work.html	/^function isEmpty(obj){for(var i in obj){return false;}return true;}\/\/]]>$/;"	function	line:28
+body	/Users/haru/php/kbtitPHP/app/work.html	/^  <body>$/;"	function	line:31
+script	/Users/haru/php/kbtitPHP/app/work.html	/^    <script type="text\/javascript">window.onload=onLoadmap;<\/script>    <script type="text\/javascript" charset="utf-8">$/;"	function	line:33
+noscript	/Users/haru/php/kbtitPHP/app/work.html	/^<noscript><b>Javascript must be enabled in order to use Google Maps.<\/b><\/noscript>$/;"	function	line:38
+div	/Users/haru/php/kbtitPHP/app/work.html	/^    <div id="sidebar_map" class="sidebar_map"><\/div>$/;"	function	line:39
+client	/Users/haru/php/kbtitPHP/app/doc.php	/^$client = new Zend_Gdata¥HttpClient();$/;"	variable	line:4
+name	/Users/haru/php/kbtitPHP/composer.json	/^    "name": "google\/apiclient",$/;"	function	line:2
+type	/Users/haru/php/kbtitPHP/composer.json	/^    "type": "library",$/;"	function	line:3
+description	/Users/haru/php/kbtitPHP/composer.json	/^    "description": "Client library for Google APIs",$/;"	function	line:4
+keywords	/Users/haru/php/kbtitPHP/composer.json	/^    "keywords": ["google"],$/;"	function	line:5
+homepage	/Users/haru/php/kbtitPHP/composer.json	/^    "homepage": "http:\/\/developers.google.com\/api-client-library\/php",$/;"	function	line:6
+license	/Users/haru/php/kbtitPHP/composer.json	/^    "license": "Apache-2.0",$/;"	function	line:7
+require	/Users/haru/php/kbtitPHP/composer.json	/^    "require": {$/;"	function	line:8
+php	/Users/haru/php/kbtitPHP/composer.json	/^        "php": ">=5.4",$/;"	function	line:9
+google/auth	/Users/haru/php/kbtitPHP/composer.json	/^        "google\/auth": "^0.11",$/;"	function	line:10
+google/apiclient-services	/Users/haru/php/kbtitPHP/composer.json	/^        "google\/apiclient-services": "^0.11",$/;"	function	line:11
+firebase/php-jwt	/Users/haru/php/kbtitPHP/composer.json	/^        "firebase\/php-jwt": "~2.0|~3.0|~4.0",$/;"	function	line:12
+monolog/monolog	/Users/haru/php/kbtitPHP/composer.json	/^        "monolog\/monolog": "^1.17",$/;"	function	line:13
+phpseclib/phpseclib	/Users/haru/php/kbtitPHP/composer.json	/^        "phpseclib\/phpseclib": "~0.3.10|~2.0",$/;"	function	line:14
+guzzlehttp/guzzle	/Users/haru/php/kbtitPHP/composer.json	/^        "guzzlehttp\/guzzle": "~5.2|~6.0",$/;"	function	line:15
+guzzlehttp/psr7	/Users/haru/php/kbtitPHP/composer.json	/^        "guzzlehttp\/psr7": "^1.2",$/;"	function	line:16
+hybridauth/hybridauth	/Users/haru/php/kbtitPHP/composer.json	/^        "hybridauth\/hybridauth": "2.2.2"$/;"	function	line:17
+require-dev	/Users/haru/php/kbtitPHP/composer.json	/^    "require-dev": {$/;"	function	line:19
+phpunit/phpunit	/Users/haru/php/kbtitPHP/composer.json	/^        "phpunit\/phpunit": "~4",$/;"	function	line:20
+squizlabs/php_codesniffer	/Users/haru/php/kbtitPHP/composer.json	/^        "squizlabs\/php_codesniffer": "~2.3",$/;"	function	line:21
+symfony/dom-crawler	/Users/haru/php/kbtitPHP/composer.json	/^        "symfony\/dom-crawler": "~2.1",$/;"	function	line:22
+symfony/css-selector	/Users/haru/php/kbtitPHP/composer.json	/^        "symfony\/css-selector": "~2.1",$/;"	function	line:23
+cache/filesystem-adapter	/Users/haru/php/kbtitPHP/composer.json	/^        "cache\/filesystem-adapter": "^0.3.2"$/;"	function	line:24
+suggest	/Users/haru/php/kbtitPHP/composer.json	/^    "suggest": {$/;"	function	line:26
+cache/filesystem-adapter	/Users/haru/php/kbtitPHP/composer.json	/^        "cache\/filesystem-adapter": "For caching certs and tokens (using Google_Client::setCache)"$/;"	function	line:27
+autoload	/Users/haru/php/kbtitPHP/composer.json	/^    "autoload": {$/;"	function	line:29
+psr-0	/Users/haru/php/kbtitPHP/composer.json	/^        "psr-0": {$/;"	function	line:30
+Google_	/Users/haru/php/kbtitPHP/composer.json	/^            "Google_": "src\/"$/;"	function	line:31
+classmap	/Users/haru/php/kbtitPHP/composer.json	/^        "classmap": [$/;"	function	line:33
+extra	/Users/haru/php/kbtitPHP/composer.json	/^    "extra": {$/;"	function	line:37
+branch-alias	/Users/haru/php/kbtitPHP/composer.json	/^        "branch-alias": {$/;"	function	line:38
+dev-master	/Users/haru/php/kbtitPHP/composer.json	/^            "dev-master": "2.x-dev"$/;"	function	line:39
+provide	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^ * Hybrid_Auth class provide a simple way to authenticate users via OpenID and OAuth.$/;"	class	line:11
+you	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^ * Generally, Hybrid_Auth is the only class you should instanciate and use throughout your application.$/;"	class	line:13
+Hybrid_Auth	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^class Hybrid_Auth$/;"	class	line:15
+version	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $version = "2.2.2";$/;"	variable	line:17
+version	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $version = "2.2.2";$/;"	variable	line:17
+config	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $config  = array();$/;"	variable	line:19
+config	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $config  = array();$/;"	variable	line:19
+store	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $store   = NULL;$/;"	variable	line:21
+store	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $store   = NULL;$/;"	variable	line:21
+error	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $error   = NULL;$/;"	variable	line:23
+error	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $error   = NULL;$/;"	variable	line:23
+logger	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $logger  = NULL;$/;"	variable	line:25
+logger	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static $logger  = NULL;$/;"	variable	line:25
+__construct	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	function __construct( $config )$/;"	function	line:37
+initialize	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function initialize( $config )$/;"	function	line:47
+config	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$config = include $config;$/;"	variable	line:54
+m	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$m = Hybrid_Error::getErrorMessage();$/;"	variable	line:138
+c	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$c = Hybrid_Error::getErrorCode();$/;"	variable	line:139
+p	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$p = Hybrid_Error::getErrorPrevious();$/;"	variable	line:140
+storage	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function storage()$/;"	function	line:170
+getSessionData	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	function getSessionData()$/;"	function	line:180
+restoreSessionData	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	function restoreSessionData( $sessiondata = NULL )$/;"	function	line:190
+sessiondata	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	function restoreSessionData( $sessiondata = NULL )$/;"	variable	line:190
+authenticate	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function authenticate( $providerId, $params = NULL )$/;"	function	line:209
+params	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function authenticate( $providerId, $params = NULL )$/;"	variable	line:209
+provider_adapter	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$provider_adapter = Hybrid_Auth::setup( $providerId, $params );$/;"	variable	line:220
+getAdapter	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function getAdapter( $providerId = NULL )$/;"	function	line:238
+providerId	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function getAdapter( $providerId = NULL )$/;"	variable	line:238
+setup	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function setup( $providerId, $params = NULL )$/;"	function	line:250
+params	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function setup( $providerId, $params = NULL )$/;"	variable	line:250
+params	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$params = Hybrid_Auth::storage()->get( "hauth_session.$providerId.id_provider_params" );$/;"	variable	line:255
+params	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$params = ARRAY();$/;"	variable	line:261
+provider	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		$provider   = new Hybrid_Provider_Adapter();$/;"	variable	line:273
+isConnectedWith	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function isConnectedWith( $providerId )$/;"	function	line:285
+getConnectedProviders	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function getConnectedProviders()$/;"	function	line:295
+idps	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		$idps = array();$/;"	variable	line:297
+idpid	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		foreach( Hybrid_Auth::$config["providers"] as $idpid => $params ){$/;"	variable	line:299
+getProviders	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function getProviders()$/;"	function	line:313
+idps	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		$idps = array();$/;"	variable	line:315
+idpid	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		foreach( Hybrid_Auth::$config["providers"] as $idpid => $params ){$/;"	variable	line:317
+to	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	* A generic function to logout all connected provider at once$/;"	function	line:333
+logoutAllProviders	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function logoutAllProviders()$/;"	function	line:335
+idps	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		$idps = Hybrid_Auth::getConnectedProviders();$/;"	variable	line:337
+adapter	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$adapter = Hybrid_Auth::getAdapter( $idp );$/;"	variable	line:340
+redirect	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function redirect( $url, $mode = "PHP" )$/;"	function	line:351
+mode	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function redirect( $url, $mode = "PHP" )$/;"	variable	line:351
+mode	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		if( $mode == "PHP" ){$/;"	variable	line:355
+mode	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		elseif( $mode == "JS" ){$/;"	variable	line:358
+getCurrentUrl	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function getCurrentUrl( $request_uri = true )$/;"	function	line:379
+request_uri	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^	public static function getCurrentUrl( $request_uri = true )$/;"	variable	line:379
+protocol	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$protocol = 'https:\/\/';$/;"	variable	line:385
+protocol	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^			$protocol = 'http:\/\/';$/;"	variable	line:388
+url	/Users/haru/php/kbtitPHP/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php	/^		$url = $protocol . $_SERVER['HTTP_HOST'];$/;"	variable	line:391
+config	/Users/haru/php/kbtitPHP/app/login.php	/^$config = '\/Users\/haru\/php\/kbtitPHP\/vendor\/hybridauth\/hybridauth\/hybridauth\/config.php';$/;"	variable	line:5
+require	/Users/haru/php/kbtitPHP/app/login.php	/^$require = require_once ('\/Users\/haru\/php\/kbtitPHP\/vendor\/hybridauth\/hybridauth\/hybridauth\/Hybrid\/Auth.php');$/;"	variable	line:7
+auth	/Users/haru/php/kbtitPHP/app/login.php	/^$auth = new Hybrid_Auth($config);$/;"	variable	line:10
+twitter_user_profile	/Users/haru/php/kbtitPHP/app/login.php	/^$twitter_user_profile = $twitter->getUserProfile();$/;"	variable	line:17
+twitter_id	/Users/haru/php/kbtitPHP/app/login.php	/^$twitter_id = $twitter_user_profile->identifier;$/;"	variable	line:18
+twitter_name	/Users/haru/php/kbtitPHP/app/login.php	/^$twitter_name = $twitter_user_profile->displayName;$/;"	variable	line:19
+config	/Users/haru/php/kbtitPHP/app/login.php	/^$config = '\/Users\/haru\/php\/kbtitPHP\/vendor\/hybridauth\/hybridauth\/hybridauth\/config.php';$/;"	variable	line:5
+require	/Users/haru/php/kbtitPHP/app/login.php	/^$require = require_once ('\/Users\/haru\/php\/kbtitPHP\/vendor\/hybridauth\/hybridauth\/hybridauth\/Hybrid\/Auth.php');$/;"	variable	line:7
+auth	/Users/haru/php/kbtitPHP/app/login.php	/^$auth = new Hybrid_Auth($config);$/;"	variable	line:10
+twitter_user_profile	/Users/haru/php/kbtitPHP/app/login.php	/^$twitter_user_profile = $twitter->getUserProfile();$/;"	variable	line:17
+twitter_id	/Users/haru/php/kbtitPHP/app/login.php	/^$twitter_id = $twitter_user_profile->identifier;$/;"	variable	line:18
+twitter_name	/Users/haru/php/kbtitPHP/app/login.php	/^$twitter_name = $twitter_user_profile->displayName;$/;"	variable	line:19
+to	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^ * PHP interface to Amazon Product Advertising API$/;"	interface	line:4
+for	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^ * Uses PEAR class for error management.$/;"	class	line:46
+to	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^ * Uses HTTP_Request class to send and receive data from Amazon web servers.$/;"	class	line:51
+to	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^ * Uses XML_Unserializer class to parse data received from Amazon.$/;"	class	line:56
+SERVICES_AMAZON_BASEURL	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    define('SERVICES_AMAZON_BASEURL', 'http:\/\/ecs.amazonaws.com\/onca\/xml');$/;"	define	line:84
+SERVICES_AMAZON_ECSVERSION	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    define('SERVICES_AMAZON_ECSVERSION', '2011-08-01');$/;"	define	line:93
+Services_Amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^class Services_Amazon$/;"	class	line:108
+_access_key_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_access_key_id = null;$/;"	variable	line:116
+_access_key_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_access_key_id = null;$/;"	variable	line:116
+_secret_access_key	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_secret_access_key = null;$/;"	variable	line:124
+_secret_access_key	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_secret_access_key = null;$/;"	variable	line:124
+_associate_tag	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_associate_tag = null;$/;"	variable	line:132
+_associate_tag	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_associate_tag = null;$/;"	variable	line:132
+_baseurl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_baseurl = SERVICES_AMAZON_BASEURL;$/;"	variable	line:140
+_baseurl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_baseurl = SERVICES_AMAZON_BASEURL;$/;"	variable	line:140
+_version	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_version = SERVICES_AMAZON_ECSVERSION;$/;"	variable	line:148
+_version	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_version = SERVICES_AMAZON_ECSVERSION;$/;"	variable	line:148
+_processing_time	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_processing_time = null;$/;"	variable	line:156
+_processing_time	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_processing_time = null;$/;"	variable	line:156
+_lasturl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_lasturl = null;$/;"	variable	line:164
+_lasturl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_lasturl = null;$/;"	variable	line:164
+_raw_result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_raw_result = null;$/;"	variable	line:172
+_raw_result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_raw_result = null;$/;"	variable	line:172
+_cache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_cache = null;$/;"	variable	line:180
+_cache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_cache = null;$/;"	variable	line:180
+_cache_expire	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_cache_expire = 3600;$/;"	variable	line:190
+_cache_expire	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_cache_expire = 3600;$/;"	variable	line:190
+_proxy_host	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_host = null;$/;"	variable	line:198
+_proxy_host	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_host = null;$/;"	variable	line:198
+_proxy_port	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_port = null;$/;"	variable	line:206
+_proxy_port	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_port = null;$/;"	variable	line:206
+_proxy_user	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_user = null;$/;"	variable	line:214
+_proxy_user	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_user = null;$/;"	variable	line:214
+_proxy_pass	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_pass = null;$/;"	variable	line:222
+_proxy_pass	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_proxy_pass = null;$/;"	variable	line:222
+_timestamp	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_timestamp = null;$/;"	variable	line:230
+_timestamp	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_timestamp = null;$/;"	variable	line:230
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_errors = array();$/;"	variable	line:238
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    var $_errors = array();$/;"	variable	line:238
+Services_Amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function Services_Amazon($access_key_id, $secret_access_key, $associate_tag = null)$/;"	function	line:253
+associate_tag	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function Services_Amazon($access_key_id, $secret_access_key, $associate_tag = null)$/;"	variable	line:253
+getApiVersion	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function getApiVersion()$/;"	function	line:267
+setAccessKeyID	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setAccessKeyID($access_key_id)$/;"	function	line:279
+_access_key_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_access_key_id = $access_key_id;$/;"	variable	line:281
+setSubscriptionID	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setSubscriptionID($subid)$/;"	function	line:291
+setSecretAccessKey	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setSecretAccessKey($secret_access_key)$/;"	function	line:303
+_secret_access_key	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_secret_access_key = $secret_access_key;$/;"	variable	line:305
+setAssociateTag	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setAssociateTag($associate_tag)$/;"	function	line:315
+_associate_tag	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_associate_tag = $associate_tag;$/;"	variable	line:317
+setAssociateID	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setAssociateID($associd)$/;"	function	line:326
+setBaseUrl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setBaseUrl($url)$/;"	function	line:338
+_baseurl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_baseurl = $url;$/;"	variable	line:340
+setLocale	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setLocale($locale)$/;"	function	line:352
+urls	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $urls = array($/;"	variable	line:354
+locale	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $locale = strtoupper($locale);$/;"	variable	line:362
+setVersion	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setVersion($version)$/;"	function	line:377
+_version	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_version = $version;$/;"	variable	line:379
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:389
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->BrowseNodeLookup('283155');$/;"	variable	line:392
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * @param  array $container_options Array with container class options$/;"	class	line:398
+setCache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setCache($container = 'file', $container_options = array())$/;"	function	line:402
+container_options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setCache($container = 'file', $container_options = array())$/;"	variable	line:402
+_cache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $this->_cache = $cache;$/;"	variable	line:411
+_cache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $this->_cache = null;$/;"	variable	line:413
+setCacheExpire	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setCacheExpire($secs)$/;"	function	line:433
+_cache_expire	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_cache_expire = $secs;$/;"	variable	line:435
+setProxy	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setProxy($host, $port = 8080, $user = null, $pass = null)$/;"	function	line:447
+port	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setProxy($host, $port = 8080, $user = null, $pass = null)$/;"	variable	line:447
+_proxy_host	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_proxy_host = $host;$/;"	variable	line:449
+_proxy_port	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_proxy_port = $port;$/;"	variable	line:450
+_proxy_user	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_proxy_user = $user;$/;"	variable	line:451
+_proxy_pass	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_proxy_pass = $pass;$/;"	variable	line:452
+setTimestamp	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function setTimestamp($time)$/;"	function	line:461
+_timestamp	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_timestamp = $time;$/;"	variable	line:463
+getErrors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function getErrors()$/;"	function	line:481
+error	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     *     $error = $amazon->getError();$/;"	variable	line:491
+getError	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function getError()$/;"	function	line:500
+getProcessingTime	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function getProcessingTime()$/;"	function	line:511
+getLastUrl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function getLastUrl()$/;"	function	line:522
+getRawResult	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function getRawResult()$/;"	function	line:533
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:544
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->BrowseNodeLookup('283155'); \/\/ 283155='Books'$/;"	variable	line:545
+BrowseNodeLookup	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function BrowseNodeLookup($browsenode_id, $options = array())$/;"	function	line:554
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function BrowseNodeLookup($browsenode_id, $options = array())$/;"	variable	line:554
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:556
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:568
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $item = array('ASIN' => 'aaaaaaaaaa', 'Quantity' => 1);$/;"	variable	line:569
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * \/\/ $item = array(array('ASIN' => 'aaaaaaaaaa', 'Quantity' => 1),$/;"	variable	line:570
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->CartAdd('[Cart ID]', '[HMAC]', $item);$/;"	variable	line:573
+CartAdd	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartAdd($cart_id, $hmac, $item, $options = array())$/;"	function	line:585
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartAdd($cart_id, $hmac, $item, $options = array())$/;"	variable	line:585
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:587
+CartClear	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartClear($cart_id, $hmac, $options = array())$/;"	function	line:605
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartClear($cart_id, $hmac, $options = array())$/;"	variable	line:605
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:607
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:620
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $item = array('ASIN' => 'aaaaaaaaaa', 'Quantity' => 1);$/;"	variable	line:621
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * \/\/ $item = array(array('ASIN' => 'aaaaaaaaaa', 'Quantity' => 1),$/;"	variable	line:622
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->CartCreate($item);$/;"	variable	line:624
+CartCreate	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartCreate($item, $options = array())$/;"	function	line:634
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartCreate($item, $options = array())$/;"	variable	line:634
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:636
+CartGet	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartGet($cart_id, $hmac, $options = array())$/;"	function	line:652
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartGet($cart_id, $hmac, $options = array())$/;"	variable	line:652
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:654
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:667
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $item = array('CartItemId' => 'aaaaaaaaaa', 'Quantity' => 1);$/;"	variable	line:668
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * \/\/ $item = array('CartItemId' => 'aaaaaaaaaa', 'Action' => 'SaveForLater');$/;"	variable	line:669
+item	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * \/\/ $item = array(array('CartItemId' => 'aaaaaaaaaa', 'Quantity' => 1),$/;"	variable	line:670
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->CartModify('[Cart ID]', '[HMAC]', $item);$/;"	variable	line:672
+CartModify	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartModify($cart_id, $hmac, $item, $options = array())$/;"	function	line:684
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function CartModify($cart_id, $hmac, $item, $options = array())$/;"	variable	line:684
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:686
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:700
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $options = array();$/;"	variable	line:701
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->ItemLookup('[ASIN(s)]', $options);$/;"	variable	line:703
+ItemLookup	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function ItemLookup($item_id, $options = array())$/;"	function	line:713
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function ItemLookup($item_id, $options = array())$/;"	variable	line:713
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:715
+item_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $item_id = implode(',', $item_id);$/;"	variable	line:718
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:730
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $options = array();$/;"	variable	line:731
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->ItemSearch('Books', $options);$/;"	variable	line:735
+ItemSearch	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function ItemSearch($search_index, $options = array())$/;"	function	line:745
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function ItemSearch($search_index, $options = array())$/;"	variable	line:745
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:747
+SimilarityLookup	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function SimilarityLookup($item_id, $options = array())$/;"	function	line:761
+options	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function SimilarityLookup($item_id, $options = array())$/;"	variable	line:761
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = $options;$/;"	variable	line:763
+item_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $item_id = implode(',', $item_id);$/;"	variable	line:766
+amazon	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $amazon = new Services_Amazon('[your Access Key ID here]', '[your Secret Access key here]');$/;"	variable	line:778
+shared	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $shared = array('SearchIndex' => 'Books',$/;"	variable	line:779
+params1	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $params1 = array('ItemPage' => '1');$/;"	variable	line:781
+params2	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $params2 = array('ItemPage' => '2');$/;"	variable	line:782
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^     * $result = $amazon->doBatch('ItemSearch', $shared, $params1, $params2);$/;"	variable	line:783
+doBatch	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function doBatch($operation, $shared, $params1 = array(), $params2 = array())$/;"	function	line:794
+params1	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function doBatch($operation, $shared, $params1 = array(), $params2 = array())$/;"	variable	line:794
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = array();$/;"	variable	line:796
+k	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        foreach ($shared as $k => $v) {$/;"	variable	line:798
+k	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        foreach ($params1 as $k => $v) {$/;"	variable	line:801
+k	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        foreach ($params2 as $k => $v) {$/;"	variable	line:804
+_assembleItemParameter	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _assembleItemParameter($items)$/;"	function	line:817
+params	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $params = array();$/;"	variable	line:819
+items	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $items = array(0 => $items);$/;"	variable	line:821
+i	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $i = 1;$/;"	variable	line:823
+k	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            foreach ($item as $k => $v) {$/;"	variable	line:825
+_ignoreCache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _ignoreCache($operation)$/;"	function	line:840
+ignore	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $ignore = array('CartAdd', 'CartClear', 'CartGet', 'CartModify');$/;"	variable	line:842
+operations	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $operations = explode(',', $operation);$/;"	variable	line:846
+_generateCacheId	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _generateCacheId($params)$/;"	function	line:862
+str	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $str = '';$/;"	variable	line:866
+k	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        foreach ($params as $k => $v) {$/;"	variable	line:867
+_urlencode	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _urlencode($str)$/;"	function	line:880
+_hash	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _hash($string_to_sign, $secret_access_key)$/;"	function	line:893
+_buildUrl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _buildUrl($params)$/;"	function	line:911
+canonical_string	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $canonical_string = '';$/;"	variable	line:925
+k	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        foreach ($params as $k => $v) {$/;"	variable	line:926
+canonical_string	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $canonical_string = substr($canonical_string, 1);$/;"	variable	line:929
+parsed_url	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $parsed_url = parse_url($this->_baseurl);$/;"	variable	line:932
+string_to_sign	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $string_to_sign = "GET\\n{$parsed_url['host']}\\n{$parsed_url['path']}\\n{$canonical_string}";$/;"	variable	line:933
+signature	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $signature = $this->_hash($string_to_sign, $this->_secret_access_key);$/;"	variable	line:934
+signature	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $signature = base64_encode($signature);$/;"	variable	line:938
+url	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $url = $this->_baseurl . '?' . $canonical_string . '&Signature=' . $this->_urlencode($signature);$/;"	variable	line:941
+_sendHttpRequest	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _sendHttpRequest($url)$/;"	function	line:953
+http	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $http = &new HTTP_Request($url);$/;"	variable	line:955
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $result = $http->sendRequest();$/;"	variable	line:962
+_parseRawResult	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _parseRawResult($raw_result)$/;"	function	line:980
+xml	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $xml = &new XML_Unserializer();$/;"	variable	line:982
+data	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $data = $xml->getUnserializedData();$/;"	variable	line:988
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $this->_errors = $data['Error'];$/;"	variable	line:994
+_processing_time	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $this->_processing_time = $data['OperationRequest']['RequestProcessingTime'];$/;"	variable	line:999
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $this->_errors = $data['OperationRequest']['Errors']['Error'];$/;"	variable	line:1003
+contents	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $contents = array();$/;"	variable	line:1010
+keys	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $keys = array_keys($data);$/;"	variable	line:1011
+contents	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^                $contents = $data[$v];$/;"	variable	line:1017
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $result = $this->_checkContentError($data[$v]);$/;"	variable	line:1019
+_checkContentError	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _checkContentError($content)$/;"	function	line:1035
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $this->_errors = $content['Request']['Errors']['Error'];$/;"	variable	line:1038
+errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $errors = array();$/;"	variable	line:1041
+errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^                    $errors = array_merge($errors, $v['Request']['Errors']['Error']);$/;"	variable	line:1044
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^                $this->_errors = $errors;$/;"	variable	line:1048
+_sendRequest	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^    function _sendRequest($params)$/;"	function	line:1062
+_errors	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_errors = array();$/;"	variable	line:1064
+url	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $url = $this->_buildUrl($params);$/;"	variable	line:1070
+_lasturl	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_lasturl = $url;$/;"	variable	line:1071
+cache_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $cache_id = false;$/;"	variable	line:1077
+cache_id	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $cache_id = $this->_generateCacheId($params);$/;"	variable	line:1079
+cache	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^            $cache = $this->_cache->get($cache_id);$/;"	variable	line:1080
+_processing_time	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^                $this->_processing_time = 0;$/;"	variable	line:1082
+result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $result = $this->_sendHttpRequest($url);$/;"	variable	line:1087
+_raw_result	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $this->_raw_result = $result;$/;"	variable	line:1088
+contents	/Users/haru/php/kbtitPHP/pearArchivePkg/Services_Amazon-0.9.0/Services/Amazon.php	/^        $contents = $this->_parseRawResult($result);$/;"	variable	line:1093
+config	/Users/haru/php/kbtitPHP/app/find.php	/^$config = [$/;"	variable	line:5
+amazon	/Users/haru/php/kbtitPHP/app/find.php	/^$amazon = new Services_Amazon($config['key'], $config['secret'],        $config['track_id']);$/;"	variable	line:11
+options	/Users/haru/php/kbtitPHP/app/find.php	/^$options = [$/;"	variable	line:17
+result	/Users/haru/php/kbtitPHP/app/find.php	/^$result = $amazon->$temSearch('Toys', $options);$/;"	variable	line:25
+max	/Users/haru/php/kbtitPHP/app/find.php	/^  $max = min($result['TotalResults'], 3);$/;"	variable	line:31
+item	/Users/haru/php/kbtitPHP/app/find.php	/^      $item = $result['item'][$i];$/;"	variable	line:34
+attrs	/Users/haru/php/kbtitPHP/app/find.php	/^      $attrs = $item['ItemAttributes'];$/;"	variable	line:35
+id	/Users/haru/php/kbtitPHP/app/find.php	/^      $id = $item['ASIN'];$/;"	variable	line:36
+amazon	/Users/haru/php/kbtitPHP/app/resarch/lookup.php	/^$amazon = new Services_Amazon($config['key'], $config['secret'], $config['track_id']);$/;"	variable	line:5
+options	/Users/haru/php/kbtitPHP/app/resarch/lookup.php	/^$options = [$/;"	variable	line:9
+id	/Users/haru/php/kbtitPHP/app/resarch/lookup.php	/^$id = isset($_GET['id'])? $_GET['id'] : '4774156116';$/;"	variable	line:12
+result	/Users/haru/php/kbtitPHP/app/resarch/lookup.php	/^$result = $amazon->ItemLookup($id, $options);$/;"	variable	line:13
+item	/Users/haru/php/kbtitPHP/app/resarch/lookup.php	/^  $item = $result['Item'][0];$/;"	variable	line:17
+yahoo	/Users/haru/php/kbtitPHP/app/yahoo.php	/^$yahoo = Services_Yahoo_JP_MA::factory('parse');$/;"	variable	line:6
+result	/Users/haru/php/kbtitPHP/app/yahoo.php	/^$result = $yahoo->submit();$/;"	variable	line:11
+xml	/Users/haru/php/kbtitPHP/app/yahoo.php	/^$xml = $result->xml->ma_result->word_list->word;$/;"	variable	line:14
+key	/Users/haru/php/kbtitPHP/app/yahoo.php	/^  foreach($xml as $key => $v){$/;"	variable	line:18

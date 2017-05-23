@@ -1,0 +1,16 @@
+uri_template.lo: /Users/haru/php/uri_template-1.0/uri_template.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/uri_template-1.0 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/uri_template-1.0/uri_template.c -o uri_template.lo 
+uri_template_common.lo: /Users/haru/php/uri_template-1.0/uri_template_common.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/uri_template-1.0 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/uri_template-1.0/uri_template_common.c -o uri_template_common.lo 
+uri_template_parser.lo: /Users/haru/php/uri_template-1.0/uri_template_parser.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/uri_template-1.0 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/uri_template-1.0/uri_template_parser.c -o uri_template_parser.lo 
+uri_template_processor.lo: /Users/haru/php/uri_template-1.0/uri_template_processor.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/uri_template-1.0 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/uri_template-1.0/uri_template_processor.c -o uri_template_processor.lo 
+uri_template_string.lo: /Users/haru/php/uri_template-1.0/uri_template_string.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/uri_template-1.0 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/uri_template-1.0/uri_template_string.c -o uri_template_string.lo 
+$(phplibdir)/uri_template.la: ./uri_template.la
+	$(LIBTOOL) --mode=install cp ./uri_template.la $(phplibdir)
+
+./uri_template.la: $(shared_objects_uri_template) $(URI_TEMPLATE_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_uri_template) $(URI_TEMPLATE_SHARED_LIBADD)
+

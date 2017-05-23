@@ -1,0 +1,27 @@
+.eve-field-tags { 
+	background: #FFFFFF; 
+	font-size: 13px;
+}
+.eve-field-tags .ui-helper-hidden { display: none !important; }
+.eve-field-tags .eve-field-tags-item { 
+	float: left; 
+	height: 18px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	padding: 3px 16px 3px 3px;
+	position: relative;
+}
+.eve-field-tags .eve-field-tags-label { float: left; }
+.eve-field-tags .eve-field-tags-remove { 
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+}
+.eve-field-tags input {
+	background: none;
+	border: 0; 
+	float: left;
+	outline: none !important;
+	padding: 3px; 
+	width: auto !important;
+}

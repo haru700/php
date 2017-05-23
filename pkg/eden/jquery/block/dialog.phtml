@@ -1,0 +1,3 @@
+<div class="eve-block-dialog"><?php echo $content; ?></div>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript">jQuery('div.eve-block-dialog').not('.eve-block-loaded').addClass('eve-block-loaded').dialog(<?php echo json_encode($options); ?>);</script>

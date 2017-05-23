@@ -1,0 +1,8 @@
+<input <?php foreach($attributes as $name => $value): ?><?php echo $name;?>="<?php echo $value; ?>" <?php endforeach; ?>/>
+<img class="eve-field-color" src="/assets/jquery/field/color/images/blank.gif" style="background-color:<?php echo isset($attributes['value']) ? $attributes['value'] : '#FFFFFF'; ?>" />
+<?php if(!$loaded): ?>
+<?php echo jquery()->core(); ?>
+<link rel="stylesheet" href="/assets/jquery/field/color.css" type="text/css" />
+<script type="text/javascript" src="/assets/jquery/field/color.js"></script>
+<?php endif; ?>
+<script type="text/javascript">(function($) {var $this = $('img.eve-field-color').not('.eve-field-loaded').addClass('eve-field-loaded').ColorPicker({color: '<?php echo isset($attributes['value']) ? $attributes['value'] : '#FFFFFF'; ?>',onShow: function(picker) {$(picker).fadeIn(500);return false;}, onHide: function(picker) {$(picker).fadeOut(500);return false;}, onChange: function (hsb, hex, rgb) {$this.css('background-color', '#' + hex.toUpperCase()).prev().val('#'+hex.toUpperCase());}});$this.prev().focus(function() {$this.click();});})(jQuery);</script>

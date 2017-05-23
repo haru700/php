@@ -1,0 +1,3 @@
+<button <?php foreach($attributes as $name => $attr): ?><?php echo $name;?>="<?php echo $attr; ?>" <?php endforeach; ?>><?php echo $value; ?></button>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript">jQuery('button.eve-block-button').not('.eve-field-loaded').addClass('eve-field-loaded').button(<?php echo json_encode($options); ?>);</script>

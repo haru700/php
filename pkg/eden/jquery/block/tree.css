@@ -1,0 +1,82 @@
+.eve-block-tree ul { padding-left: 25px; }
+
+.eve-block-tree .eve-block-tree-root {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+.eve-block-tree li { 
+	list-style: none; 
+	position: relative;
+}
+
+.eve-block-tree .eve-block-tree-item { 
+	cursor: move;
+	margin-bottom: -1px;
+}
+.eve-block-tree .eve-block-tree-icon { 
+	cursor: pointer;
+	margin: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.eve-block-tree .eve-block-tree-separator {
+	height: 18px;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	margin: 1px 3px 1px 1px;
+	float: left;
+}
+
+.eve-block-tree .eve-block-tree-label,
+.eve-block-tree .eve-block-tree-label:link,
+.eve-block-tree .eve-block-tree-label:active,
+.eve-block-tree .eve-block-tree-label:visited  {
+	background-color: #EFEFEF; 
+	border: 0;
+	color: #232323;
+	cursor: pointer;
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 26px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.eve-block-tree .eve-block-tree-field  { 
+	display: none;
+	padding: 3px 0 3px 25px;
+	width: auto;
+}
+
+.eve-block-tree .eve-block-tree-error { padding: 0; }
+.eve-block-tree .eve-block-tree-placeholder { padding: 0; }
+
+.eve-block-tree .eve-block-tree-head { padding: 5px; }
+.eve-block-tree .eve-block-tree-head .eve-block-tree-separator {
+	height: 18px;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	margin: 1px 3px 1px 1px;
+	float: left;
+}
+
+.eve-block-tree .eve-block-tree-head .eve-block-tree-action { 
+	border-width: 0;
+	float: left; 
+	margin-right: 3px;
+	padding: 1px;
+}
+
+.eve-block-tree .eve-block-tree-head .ui-state-hover { 
+	border-width: 1px; 
+	padding: 0;
+}
+
+.eve-block-tree .eve-block-tree-head .ui-state-disabled a { cursor: default; }
+
+.eve-block-tree .eve-block-tree-clone { display: none; }

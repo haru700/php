@@ -1,0 +1,14 @@
+<?php if($start): ?>
+<div class="eve-block-navigation ui-widget ui-corner-all">
+	<div class="eve-block-navigation-body ui-widget-content ui-helper-clearfix">
+	<?php include(dirname(__FILE__).'/navigation/list.phtml'); ?></div>
+</div>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<link rel="stylesheet" type="text/css" href="/assets/jquery/block/navigation.css" />
+<script type="text/javascript" src="/assets/jquery/block/navigation.js"></script>
+<?php endif; ?>
+<script type="text/javascript">jQuery('div.eve-block-navigation').not('.eve-block-loaded').addClass('eve-block-loaded').navigation(<?php echo json_encode($options); ?>);</script>
+<?php else: ?>
+<?php include(dirname(__FILE__).'/navigation/list.phtml'); ?>
+<?php endif; ?>

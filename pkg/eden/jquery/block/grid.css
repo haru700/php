@@ -1,0 +1,186 @@
+.eve-block-grid {
+	font-size: 12px;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.eve-block-grid .eve-block-grid-pin { z-index: 10; }
+
+/* Head */
+.eve-block-grid .eve-block-grid-head { 
+	height: 50px;
+	width: 100%; 
+}
+.eve-block-grid .eve-block-grid-head .eve-block-grid-sort { 
+	border: 0;
+	cursor: n-resize;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.eve-block-grid .eve-block-grid-head .eve-block-grid-column { 
+	float: left; 
+	position: relative;
+}
+
+.eve-block-grid .eve-block-grid-head .eve-block-grid-sort a {
+	float: right;
+	margin-top: 3px;
+}
+
+.eve-block-grid .eve-block-grid-head .eve-block-grid-sort .eve-block-grid-label {
+	display: block;
+	padding: 5px 0 5px 5px;
+	border-right: 1px solid #EFEFEF;
+}
+
+.eve-block-grid .eve-block-grid-head .eve-block-grid-search { 
+	border: 0;
+	height: 25px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.eve-block-grid .eve-block-grid-head .eve-block-grid-search .eve-block-grid-field {
+	border-right: 1px solid #EFEFEF;
+	display: block;
+	padding: 0 3px 5px;
+}
+
+.eve-block-grid .eve-block-grid-head .eve-block-grid-search .eve-block-grid-field .eve-block-grid-text {
+	border: 0;
+	padding: 3px 0;
+	width: 100%;
+}
+
+/* Body */
+.eve-block-grid .eve-block-grid-body { 
+	border: 0;
+	overflow: hidden; 
+	margin: 0 15px 15px 0;
+	position: relative;
+	width: 100%;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-scroll { position: relative; }
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-row {
+	height: 25px;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-clone { display: none; }
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-column {
+	float: left; 
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-row .eve-block-grid-label {
+	border-bottom: 1px solid #EFEFEF;
+	border-right: 1px solid #EFEFEF;
+	display: block;
+	height: 15px;
+	padding: 5px 0 5px 5px;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-column .eve-block-grid-field {
+	border-right: 1px solid #EFEFEF;
+	display: none;
+	height: 99%;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-column .eve-block-grid-field .eve-block-grid-text {
+	border: 0;
+	height: 16px;
+	padding: 3px;
+	width: 99%;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-column .eve-block-grid-field .eve-block-grid-textarea {
+	border: 0;
+	height: 200px;
+	padding: 3px 0;
+	width: 99%;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-column .eve-block-grid-field .eve-block-grid-no-field {
+	border: 0;
+	display: block;
+	padding: 4px;
+	width: 99%;
+}
+
+.eve-block-grid .eve-block-grid-body .eve-block-grid-column .eve-block-grid-field .eve-block-grid-select {
+	border: 0;
+	height: 22px;
+	padding: 3px;
+	width: 99%;
+}
+
+.eve-block-grid .eve-block-grid-frame {
+	height: 100%;
+	left: 0; 
+	overflow: auto; 
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+/* Foot */
+.eve-block-grid .eve-block-grid-foot { 
+	height: 20px;
+	padding: 5px; 
+	width: 100%; 
+}
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-separator {
+	height: 18px;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	margin: 1px 3px 1px 1px;
+	float: left;
+}
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-action { 
+	border-width: 0;
+	float: left; 
+	margin-right: 3px;
+	padding: 1px;
+}
+
+.eve-block-grid .eve-block-grid-foot .ui-state-hover { 
+	border-width: 1px; 
+	padding: 0;
+}
+
+.eve-block-grid .eve-block-grid-foot .ui-state-disabled a { cursor: default; }
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-pagination { 
+	float: right;
+	font-size: 10px; 
+	font-weight: normal;
+}
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-action-page { float: left; }
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-action-page input { width: 25px; }
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-action-range { 
+	float: left;
+	padding-top: 1px;
+}
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-action-range select { width: 50px; }
+
+.eve-block-grid .eve-block-grid-foot .eve-block-grid-action-info { 
+	float: left;
+	padding-top: 2px;
+	text-align: right;
+	width: 200px;
+}
+
+span.cke_skin_kama { padding: 0 !important; }

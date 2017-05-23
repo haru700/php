@@ -1,0 +1,10 @@
+oauth.lo: /Users/haru/php/pecl/oauth-2.0.2/oauth.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/pecl/oauth-2.0.2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/pecl/oauth-2.0.2/oauth.c -o oauth.lo 
+provider.lo: /Users/haru/php/pecl/oauth-2.0.2/provider.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/haru/php/pecl/oauth-2.0.2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/haru/php/pecl/oauth-2.0.2/provider.c -o provider.lo 
+$(phplibdir)/oauth.la: ./oauth.la
+	$(LIBTOOL) --mode=install cp ./oauth.la $(phplibdir)
+
+./oauth.la: $(shared_objects_oauth) $(OAUTH_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_oauth) $(OAUTH_SHARED_LIBADD)
+

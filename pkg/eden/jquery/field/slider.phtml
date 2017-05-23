@@ -1,0 +1,9 @@
+<div class="eve-field-slider ui-helper-clearfix">
+	<input <?php foreach($attributes as $name => $value): ?><?php echo $name;?>="<?php echo $value; ?>" <?php endforeach; ?>/>
+	<span></span>
+</div>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<link rel="stylesheet" type="text/css" href="/assets/jquery/field/slider.css" />
+<?php endif; ?>
+<script type="text/javascript">(function() {var options = <?php echo json_encode($options); ?>;options.value = '<?php echo $attributes['value']; ?>';options.slide = function(e, ui) { jQuery(e.target).prev().val( ui.value ); };var direction = options.orientation == 'vertical' ? 'height':'width';jQuery('div.eve-field-slider').not('.eve-field-loaded').addClass('eve-field-loaded').children('span').slider(options)[direction]('<?php echo $size; ?>');})();</script>

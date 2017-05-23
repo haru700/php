@@ -1,0 +1,471 @@
+[
+    {
+        "name": "dropbox-php/dropbox-php",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Dropbox-PHP/dropbox-php.git",
+            "reference": "81977a8b021dd5a32b34d84721712f1284029667"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Dropbox-PHP/dropbox-php/zipball/81977a8b021dd5a32b34d84721712f1284029667",
+            "reference": "81977a8b021dd5a32b34d84721712f1284029667",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "suggest": {
+            "http_oauth": ">=1.1.18",
+            "oauth": "*"
+        },
+        "time": "2012-09-10T06:07:54+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Dropbox": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Evert Pot",
+                "email": "evert@rooftopsolutions.nl",
+                "homepage": "http://www.rooftopsolutions.nl/",
+                "role": "Developer"
+            },
+            {
+                "name": "Joe Constant",
+                "email": "lazyguru@jofee.com",
+                "homepage": "http://www.joeconstant.me/",
+                "role": "Developer"
+            },
+            {
+                "name": "Evan Kaufman",
+                "role": "Developer"
+            },
+            {
+                "name": "Naoki Sawada",
+                "role": "Developer"
+            }
+        ],
+        "description": "Dropbox PHP library",
+        "homepage": "http://dropbox-php.com/",
+        "keywords": [
+            "dropbox"
+        ],
+        "abandoned": "dropbox/dropbox-sdk"
+    },
+    {
+        "name": "dropbox/dropbox-sdk",
+        "version": "v1.1.7",
+        "version_normalized": "1.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dropbox/dropbox-sdk-php.git",
+            "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dropbox/dropbox-sdk-php/zipball/0f1a178ca9c0271bca6426dde8f5a2241578deae",
+            "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">= 5.3"
+        },
+        "require-dev": {
+            "apigen/apigen": "4.1.2",
+            "phpunit/phpunit": "~4.0",
+            "squizlabs/php_codesniffer": "2.0.0RC3"
+        },
+        "time": "2016-08-08T23:48:49+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Dropbox": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Dropbox SDK for PHP",
+        "keywords": [
+            "dropbox"
+        ]
+    },
+    {
+        "name": "pimple/pimple",
+        "version": "v3.0.2",
+        "version_normalized": "3.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/silexphp/Pimple.git",
+            "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a30f7d6e57565a2e1a316e1baf2a483f788b258a",
+            "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2015-09-11T15:10:35+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Pimple": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Pimple, a simple Dependency Injection Container",
+        "homepage": "http://pimple.sensiolabs.org",
+        "keywords": [
+            "container",
+            "dependency injection"
+        ]
+    },
+    {
+        "name": "vlucas/bulletphp",
+        "version": "v1.4.2",
+        "version_normalized": "1.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vlucas/bulletphp.git",
+            "reference": "6a169d3638570398b02724a32905adbf7b0119ad"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vlucas/bulletphp/zipball/6a169d3638570398b02724a32905adbf7b0119ad",
+            "reference": "6a169d3638570398b02724a32905adbf7b0119ad",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "pimple/pimple": "~3.0"
+        },
+        "time": "2014-10-22T16:56:15+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Bullet": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD"
+        ],
+        "authors": [
+            {
+                "name": "Vance Lucas",
+                "email": "vance@vancelucas.com",
+                "homepage": "http://www.vancelucas.com"
+            }
+        ],
+        "description": "A heierarchical resource-oriented micro-framework built on nested closures instead of route-based callbacks",
+        "homepage": "http://bulletphp.com",
+        "keywords": [
+            "framework",
+            "micro",
+            "microframework",
+            "microphp",
+            "router",
+            "routing"
+        ]
+    },
+    {
+        "name": "evernote/evernote",
+        "version": "1.23.3",
+        "version_normalized": "1.23.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/evernote/evernote-sdk-php.git",
+            "reference": "9b9a0dd531b3f2bf56755a914f064da75e73209f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/evernote/evernote-sdk-php/zipball/9b9a0dd531b3f2bf56755a914f064da75e73209f",
+            "reference": "9b9a0dd531b3f2bf56755a914f064da75e73209f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2013-04-12T17:57:10+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lib/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache"
+        ],
+        "authors": [
+            {
+                "name": "Evernote and contributors",
+                "homepage": "https://github.com/evernote/evernote-sdk-php/contributors"
+            }
+        ],
+        "description": "Evernote PHP SDK",
+        "homepage": "https://github.com/evernote/evernote-sdk-php",
+        "keywords": [
+            "api",
+            "evernote",
+            "sdk"
+        ]
+    },
+    {
+        "name": "symfony/event-dispatcher",
+        "version": "v2.8.20",
+        "version_normalized": "2.8.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/event-dispatcher.git",
+            "reference": "7fc8e2b4118ff316550596357325dfd92a51f531"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/7fc8e2b4118ff316550596357325dfd92a51f531",
+            "reference": "7fc8e2b4118ff316550596357325dfd92a51f531",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/config": "^2.0.5|~3.0.0",
+            "symfony/dependency-injection": "~2.6|~3.0.0",
+            "symfony/expression-language": "~2.6|~3.0.0",
+            "symfony/stopwatch": "~2.3|~3.0.0"
+        },
+        "suggest": {
+            "symfony/dependency-injection": "",
+            "symfony/http-kernel": ""
+        },
+        "time": "2017-04-26T16:56:54+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\EventDispatcher\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony EventDispatcher Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "guzzle/guzzle",
+        "version": "v3.9.3",
+        "version_normalized": "3.9.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle3.git",
+            "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
+            "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3.3",
+            "symfony/event-dispatcher": "~2.1"
+        },
+        "replace": {
+            "guzzle/batch": "self.version",
+            "guzzle/cache": "self.version",
+            "guzzle/common": "self.version",
+            "guzzle/http": "self.version",
+            "guzzle/inflection": "self.version",
+            "guzzle/iterator": "self.version",
+            "guzzle/log": "self.version",
+            "guzzle/parser": "self.version",
+            "guzzle/plugin": "self.version",
+            "guzzle/plugin-async": "self.version",
+            "guzzle/plugin-backoff": "self.version",
+            "guzzle/plugin-cache": "self.version",
+            "guzzle/plugin-cookie": "self.version",
+            "guzzle/plugin-curlauth": "self.version",
+            "guzzle/plugin-error-response": "self.version",
+            "guzzle/plugin-history": "self.version",
+            "guzzle/plugin-log": "self.version",
+            "guzzle/plugin-md5": "self.version",
+            "guzzle/plugin-mock": "self.version",
+            "guzzle/plugin-oauth": "self.version",
+            "guzzle/service": "self.version",
+            "guzzle/stream": "self.version"
+        },
+        "require-dev": {
+            "doctrine/cache": "~1.3",
+            "monolog/monolog": "~1.0",
+            "phpunit/phpunit": "3.7.*",
+            "psr/log": "~1.0",
+            "symfony/class-loader": "~2.1",
+            "zendframework/zend-cache": "2.*,<2.3",
+            "zendframework/zend-log": "2.*,<2.3"
+        },
+        "suggest": {
+            "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
+        },
+        "time": "2015-03-18T18:23:50+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.9-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle": "src/",
+                "Guzzle\\Tests": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Guzzle Community",
+                "homepage": "https://github.com/guzzle/guzzle/contributors"
+            }
+        ],
+        "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "rest",
+            "web service"
+        ],
+        "abandoned": "guzzlehttp/guzzle"
+    },
+    {
+        "name": "knplabs/github-api",
+        "version": "1.7.1",
+        "version_normalized": "1.7.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/php-github-api.git",
+            "reference": "98d0bcd2c4c96a40ded9081f8f6289907f73823c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/98d0bcd2c4c96a40ded9081f8f6289907f73823c",
+            "reference": "98d0bcd2c4c96a40ded9081f8f6289907f73823c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "guzzle/guzzle": "~3.7",
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0",
+            "sllh/php-cs-fixer-styleci-bridge": "~1.3"
+        },
+        "suggest": {
+            "knplabs/gaufrette": "Needed for optional Gaufrette cache"
+        },
+        "time": "2016-07-26T08:49:38+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.8.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Github\\": "lib/Github/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Thibault Duplessis",
+                "email": "thibault.duplessis@gmail.com",
+                "homepage": "http://ornicar.github.com"
+            },
+            {
+                "name": "KnpLabs Team",
+                "homepage": "http://knplabs.com"
+            }
+        ],
+        "description": "GitHub API v3 client",
+        "homepage": "https://github.com/KnpLabs/php-github-api",
+        "keywords": [
+            "api",
+            "gh",
+            "gist",
+            "github"
+        ]
+    }
+]

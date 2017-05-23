@@ -1,0 +1,10 @@
+<?php if(!empty($items)): ?>
+<div class="eve-block-accordion">
+	<?php foreach($items as $item): ?>
+	<h3><a href="<?php echo $item[0]; ?>"><?php echo $item[1]; ?></a></h3>
+	<div><?php echo $item[2]; ?></div>
+	<?php endforeach; ?>
+</div>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript">jQuery('div.eve-block-accordion').not('.eve-block-loaded').addClass('eve-block-loaded').accordion(<?php echo json_encode($options); ?>);</script>
+<?php endif; ?>

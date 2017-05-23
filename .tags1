@@ -1,0 +1,10 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+yahoo	/Users/haru/php/kbtitPHP/app/yahoo.php	/^$yahoo = Services_Yahoo_JP_MA::factory('parse');$/;"	variable	line:6
+result	/Users/haru/php/kbtitPHP/app/yahoo.php	/^$result = $yahoo->submit();$/;"	variable	line:11
+xml	/Users/haru/php/kbtitPHP/app/yahoo.php	/^$xml = $result->xml->ma_result->word_list->word;$/;"	variable	line:14
+key	/Users/haru/php/kbtitPHP/app/yahoo.php	/^  foreach($xml as $key => $v){$/;"	variable	line:18

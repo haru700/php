@@ -1,0 +1,16 @@
+<?php if(!empty($items)): ?>
+<div class="eve-block-tabs">
+	<ul>
+		<?php foreach($items as $item): ?>
+		<li><a href="<?php echo $item[0]; ?>"><?php echo $item[1]; ?></a></li>
+		<?php endforeach; ?>
+	</ul>
+	<?php foreach($items as $item): ?>
+	<?php if($item[2]): ?>
+	<div id="<?php echo substr($item[0], 1); ?>"><?php echo $item[2]; ?></div>
+	<?php endif; ?>
+	<?php endforeach; ?>
+</div>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript">jQuery('div.eve-block-tabs').not('.eve-block-loaded').addClass('eve-block-loaded').tabs(<?php echo json_encode($options); ?>);</script>
+<?php endif; ?>

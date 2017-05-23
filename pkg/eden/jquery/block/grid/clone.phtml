@@ -1,0 +1,38 @@
+<div title="" style="width:<?php echo $column['width']; ?>px"
+class="eve-block-grid-column<?php echo $j < $options['pin'] ? ' eve-block-grid-pin':''; ?>">
+	<span class="eve-block-grid-label<?php echo $j < $options['pin'] ? ' ui-state-default':''; ?>">&nbsp;</span>
+	<span class="eve-block-grid-field<?php echo $j < $options['pin'] ? ' ui-state-default':''; ?>">
+	<?php if($column['field'] == 'select'): ?>
+	<?php echo jquery()->field()
+		->select($column['key'], NULL, $column['options'])
+		->setAttributes('class', 'eve-block-grid-select'); ?>
+	<?php elseif($column['field'] == 'textarea'): ?>
+	<?php echo jquery()->field()
+		->textarea($column['key'])
+		->setAttributes('class', 'eve-block-grid-textarea'); ?>
+	<?php elseif($column['field'] == 'wysiwyg'): ?>
+	<?php echo jquery()->field()
+		->textarea($column['key'])
+		->setAttributes('class', 'eve-block-grid-wysiwyg')
+		->setAttributes('id', 'eve-block-grid-wysiwyg'.jquery()->uid()); ?>
+	<?php elseif($column['field'] == 'time'): ?>
+	<?php echo jquery()->field()
+		->time($column['key'])
+		->setAttributes('class', 'text time eve-block-grid-text'); ?>
+	<?php elseif($column['field'] == 'date'): ?>
+	<?php echo jquery()->field()
+		->date($column['key'])
+		->setAttributes('class', 'text date eve-block-grid-text'); ?>
+	<?php elseif($column['field'] == 'datetime'): ?>
+	<?php echo jquery()->field()
+		->datetime($column['key'])
+		->setAttributes('class', 'text datetime eve-block-grid-text'); ?>
+	<?php elseif($column['field']): ?>
+	<?php echo jquery()->field()
+		->text($column['key'])
+		->setAttributes('class', 'eve-block-grid-text'); ?>
+	<?php else: ?>
+	<span class="eve-block-grid-no-field">&nbsp;</span>
+	<?php endif; ?>
+	</span>
+</div>

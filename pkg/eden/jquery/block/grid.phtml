@@ -1,0 +1,106 @@
+<div class="eve-block-grid ui-widget ui-corner-all">
+	<div class="eve-block-grid-head ui-helper-clearfix" style="width:<?php echo $width; ?>px;">
+		<?php foreach($columns as $i => $column): ?>
+		<div title="<?php echo $column['key']; ?>" 
+		class="eve-block-grid-column<?php echo $i < $options['pin'] ? ' eve-block-grid-pin':''; ?>"
+		style="width:<?php echo $column['width']; ?>px;">
+			<div class="eve-block-grid-sort ui-state-default">
+				<a class="ui-state-disabled ui-icon ui-icon-triangle-2-n-s" 
+				href="#sort">ASC</a>
+				<span class="eve-block-grid-label">
+				<?php echo $column['label']; ?>
+				</span>
+			</div>
+			<div class="eve-block-grid-search ui-state-default">
+				<span class="eve-block-grid-field">
+				<input type="text" class="eve-block-grid-text" name="<?php echo $column['key']; ?>" value="" />
+				</span>
+			</div>
+		</div>
+		<?php endforeach; ?>
+	</div>
+	
+	<div class="eve-block-grid-frame">
+		<div class="eve-block-grid-film" style="width:<?php echo $width; ?>px;height:<?php echo count($rows)*25;?>px"></div>
+	</div>
+	
+	<div class="eve-block-grid-body ui-widget-content">
+		<div class="eve-block-grid-scroll" style="width:<?php echo $width; ?>px;">
+			<?php foreach($rows as $i => $row): ?>
+			<?php if($i == 0): ?>
+			<div class="eve-block-grid-row eve-block-grid-clone ui-helper-clearfix" >
+				<?php foreach($columns as $j => $column): ?>
+				<?php include(dirname(__FILE__).'/grid/clone.phtml'); ?>
+				<?php endforeach; ?>
+			</div>
+			<?php endif; ?>
+			<div class="eve-block-grid-row ui-helper-clearfix" >
+				<?php foreach($columns as $j => $column): ?>
+				<?php include(dirname(__FILE__).'/grid/row.phtml'); ?>
+				<?php endforeach; ?>
+			</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	
+	<div class="eve-block-grid-foot ui-state-default ui-helper-clearfix">
+		<span class="ui-state-disabled ui-corner-all eve-block-grid-action eve-block-grid-action-remove">
+			<a class="ui-icon ui-icon-trash" href="#remove">Remove</a>
+		</span>
+		
+		<span class="eve-block-grid-separator"></span>
+		
+		<span class="ui-corner-all eve-block-grid-action eve-block-grid-action-add">
+			<a class="ui-icon ui-icon-plus" href="#add">Add</a>
+		</span>
+		<span class="ui-state-disabled ui-corner-all eve-block-grid-action eve-block-grid-action-edit">
+			<a class="ui-icon ui-icon-pencil" href="#edit">Edit</a>
+		</span>
+		<span class="ui-state-disabled ui-corner-all eve-block-grid-action eve-block-grid-action-save">
+			<a class="ui-icon ui-icon-disk" href="#save">Save</a>
+		</span>
+		<span class="ui-state-disabled ui-corner-all eve-block-grid-action eve-block-grid-action-cancel">
+			<a class="ui-icon ui-icon-cancel" href="#cancel">Cancel</a>
+		</span>
+		
+		<span class="eve-block-grid-pagination">
+			<span class="ui-state-disabled ui-corner-all eve-block-grid-action eve-block-grid-action-first">
+				<a class="ui-icon ui-icon-seek-first" href="#first">First</a>
+			</span>
+			<span class="ui-state-disabled ui-corner-all eve-block-grid-action eve-block-grid-action-prev">
+				<a class="ui-icon ui-icon-seek-prev" href="#prev">Previous</a>
+			</span>
+			
+			<span class="eve-block-grid-action-page">
+			Page <input type="text" name="page" value="1" /> of 
+			<span class="eve-block-grid-page-total"><?php echo ceil($total/25); ?></span>
+			</span>
+			
+			<span class="ui-corner-all eve-block-grid-action eve-block-grid-action-next">
+				<a class="ui-icon ui-icon-seek-next" href="#next">Next</a>
+			</span>
+			<span class="ui-corner-all eve-block-grid-action eve-block-grid-action-last">
+				<a class="ui-icon ui-icon-seek-end" href="#last">Last</a>
+			</span>
+			<span class="eve-block-grid-action-range">
+				<select name="range">
+					<option>25</option>
+					<option>50</option>
+					<option>100</option>
+				</select>
+			</span>
+			<span class="eve-block-grid-action-info">
+				Viewing <span class="eve-block-grid-info-start">1</span> 
+				- <span class="eve-block-grid-info-end">25</span> 
+				of <span class="eve-block-grid-info-count"><?php echo $total; ?></span>
+			</span>
+		</span>
+		
+	</div>
+</div>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?> 
+<link rel="stylesheet" type="text/css" href="/assets/jquery/block/grid.css" />
+<script type="text/javascript" src="/assets/jquery/block/grid.js"></script>
+<?php endif; ?>
+<script type="text/javascript">(function($) {var url = '<?php echo $url; ?>', columns = <?php echo json_encode($columns); ?>,options = <?php echo json_encode($options); ?>,wysiwyg = <?php echo json_encode($wysiwyg); ?>;$('div.eve-block-grid').not('.eve-block-loaded').addClass('eve-block-loaded').grid(options, columns, wysiwyg).bind('ui-grid-sort', function(e, data) {var self = this;$.get(url, data, function(response) {$('div.eve-block-grid-body', self).html(response);$('textarea.eve-block-grid-wysiwyg', self).each(function() {CKEDITOR.replace(this, wysiwyg);});});}).bind('ui-grid-search', function(e, data) {var self = this;$.get(url, data, function(response) {$('div.eve-block-grid-body', self).html(response);$('textarea.eve-block-grid-wysiwyg', self).each(function() {CKEDITOR.replace(this, wysiwyg);});});}).bind('ui-grid-remove', function(e, data) {var query = {};data.rows.each(function(i) {var values = {};$(this).children('div.eve-block-grid-column').each(function(j) {values[columns[j].key] = this.title;});query[i] = values;});$.post(url, {remove: query});}).bind('ui-grid-save', function(e, data) {$.post(url, {save: data.data});}).bind('ui-grid-pagination', function(e, data) {var self = this;$.get(url, data, function(response) {$('div.eve-block-grid-body', self).html(response);$('textarea.eve-block-grid-wysiwyg', self).each(function() {CKEDITOR.replace(this, wysiwyg);});});});})(jQuery);</script>

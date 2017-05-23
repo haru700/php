@@ -1,0 +1,7 @@
+<input <?php foreach($attributes as $name => $value): ?><?php echo $name;?>="<?php echo $value; ?>" <?php endforeach; ?>/>
+<?php if(isset($attributes['multiple'])): ?>
+<span class="eve-field-file-list ui-widget-content ui-helper-clearfix"></span>
+<script type="text/javascript" src="/assets/jquery/field/file.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/jquery/field/file.css" />
+<script type="text/javascript">jQuery('input.file').not('.eve-field-loaded').addClass('eve-field-loaded').addClass('eve-field-file').file();</script>
+<?php endif; ?>

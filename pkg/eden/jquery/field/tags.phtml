@@ -1,0 +1,33 @@
+<div class="eve-field-tags ui-widget-content ui-helper-clearfix">
+	<?php if(is_string($value)): ?>
+	<span class="eve-field-tags-item ui-state-default ui-helper-clearfix">
+		<span class="eve-field-tags-label"><?php echo $value; ?></span>
+		<span class="eve-field-tags-remove ui-icon ui-icon-close">Remove</span>
+		<input name="<?php echo $attributes['name']; ?>" type="hidden" value="<?php echo $value; ?>" />
+	</span>
+	<?php elseif(is_array($value)): ?>
+	<?php foreach($value as $tag): ?>
+	<span class="eve-field-tags-item ui-state-default ui-helper-clearfix">
+		<span class="eve-field-tags-label"><?php echo $tag; ?></span>
+		<span class="eve-field-tags-remove ui-icon ui-icon-close">Remove</span>
+		<input name="<?php echo $attributes['name']; ?>" type="hidden" value="<?php echo $tag; ?>" />
+	</span>
+	<?php endforeach; ?>
+	<?php endif; ?>
+	<?php if(empty($items)): ?>
+	<input <?php foreach($attributes as $name => $val): ?><?php echo $name;?>="<?php echo $val; ?>" <?php endforeach; ?>/>
+	<?php else: ?>
+	<?php echo jquery()->field()->autocomplete($attributes['name'], $items)->setAttributes($attributes); ?>
+	<?php endif; ?>
+	<span class="eve-field-tags-item ui-state-default ui-helper-clearfix ui-helper-hidden">
+		<span class="eve-field-tags-label"></span>
+		<span class="eve-field-tags-remove ui-icon ui-icon-close">Remove</span>
+		<input name="<?php echo $attributes['name']; ?>" type="hidden" />
+	</span>
+</div>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript" src="/assets/jquery/field/tags.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/jquery/field/tags.css" />
+<?php endif; ?>
+<script type="text/javascript">jQuery('div.eve-field-tags').not('.eve-field-loaded').addClass('eve-field-loaded').tags(<?php echo json_encode($options); ?>);</script>

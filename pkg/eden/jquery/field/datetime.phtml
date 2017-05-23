@@ -1,0 +1,6 @@
+<input <?php foreach($attributes as $name => $value): ?><?php echo $name;?>="<?php echo $value; ?>" <?php endforeach; ?>/>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript" src="/assets/jquery/field/datetime.js"></script>
+<?php endif; ?>
+<script type="text/javascript">jQuery('input.eve-field-datetime').not('.eve-field-loaded').addClass('eve-field-loaded').datetimepicker(<?php echo json_encode($options); ?>);</script>

@@ -1,0 +1,35 @@
+<select<?php foreach($attributes as $name => $value): ?> <?php echo $name;?>="<?php echo $value; ?>"<?php endforeach; ?>>
+	<?php foreach($items as $value => $label): ?>
+	<?php if(is_array($label)): ?>
+	<optgroup label="<?php echo $value; ?>">
+	<?php $group = $label;foreach($group as $value => $label): ?>
+	<?php if(is_null($label)): ?>
+	<?php if($selected == $value): ?>
+	<option selected="selected"><?php echo $value; ?></option>
+	<?php else: ?>
+	<option><?php echo $value; ?></option>
+	<?php endif; ?>
+	<?php else: ?>
+	<?php if($selected == $value): ?>
+	<option value="<?php echo $value; ?>" selected="selected"><?php echo $label; ?></option>
+	<?php else: ?>
+	<option value="<?php echo $value; ?>"><?php echo $label; ?></option>
+	<?php endif; ?>
+	<?php endif; ?>
+	<?php endforeach; ?>
+	</optgroup>
+	<?php elseif(is_null($label)): ?>
+	<?php if($selected == $value): ?>
+	<option selected="selected"><?php echo $value; ?></option>
+	<?php else: ?>
+	<option><?php echo $value; ?></option>
+	<?php endif; ?>
+	<?php else: ?>
+	<?php if($selected == $value): ?>
+	<option value="<?php echo $value; ?>" selected="selected"><?php echo $label; ?></option>
+	<?php else: ?>
+	<option value="<?php echo $value; ?>"><?php echo $label; ?></option>
+	<?php endif; ?>
+	<?php endif; ?>
+	<?php endforeach; ?>
+</select>

@@ -1,0 +1,18 @@
+<ul<?php foreach($attributes as $name => $value): ?> <?php echo $name;?>="<?php echo $value; ?>"<?php endforeach; ?>>
+	<?php foreach($node->children as $child): ?>
+	<li title="<?php echo $child->key; ?>" 
+	class="<?php echo $child->type; ?> <?php echo $types[$child->type]['open']
+	? 'eve-block-tree-branch':'eve-block-tree-leaf'; ?>">
+		<div class="eve-block-tree-item ui-state-default ui-helper-clearfix">
+			<span class="eve-block-tree-icon ui-icon <?php echo $types[$child->type]['open'] ? 
+			$types[$child->type]['open'] : $types[$child->type]['close']; ?>"></span>
+			<a rel="<?php echo $child->type; ?>" class="eve-block-tree-label" 
+			href="<?php echo $root.$child->path; ?>"><?php echo $child->label; ?></a>
+			<input class="eve-block-tree-field" value="<?php echo $child->label; ?>" />
+		</div>
+		<?php if(!empty($child->children)): ?>
+		<?php echo jquery()->Jquery_Block_Tree($root, $child)->setTypes($types); ?>
+		<?php endif; ?>
+	</li>
+	<?php endforeach; ?>
+</ul>

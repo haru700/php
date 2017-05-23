@@ -1,0 +1,16 @@
+<div class="eve-block-grid-scroll" style="width:<?php echo $width; ?>px;">
+	<?php foreach($rows as $i => $row): ?>
+	<?php if($i == 0): ?>
+	<div class="eve-block-grid-row eve-block-grid-clone ui-helper-clearfix" >
+		<?php foreach($columns as $j => $column): ?>
+		<?php include(dirname(__FILE__).'/clone.phtml'); ?>
+		<?php endforeach; ?>
+	</div>
+	<?php endif; ?>
+	<div class="eve-block-grid-row ui-helper-clearfix" >
+		<?php foreach($columns as $j => $column): ?>
+		<?php include(dirname(__FILE__).'/nojs.phtml'); ?>
+		<?php endforeach; ?>
+	</div>
+	<?php endforeach; ?>
+</div>

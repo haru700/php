@@ -1,0 +1,8 @@
+<textarea<?php foreach($attributes as $name => $val): ?> <?php echo $name;?>="<?php echo $val; ?>"<?php endforeach; ?>><?php echo $value; ?></textarea>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript">window.CKEDITOR_BASEPATH='/assets/jquery/field/wysiwyg/';</script>
+<script type="text/javascript" src="/assets/jquery/field/wysiwyg/script.js"></script>
+<?php endif; ?>
+<script type="text/javascript">jQuery('textarea.eve-field-wysiwyg').not('.eve-field-loaded').addClass('eve-field-loaded').each(function() {CKEDITOR.replace(this, <?php echo json_encode($options); ?>);});
+</script>

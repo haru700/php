@@ -1,0 +1,10 @@
+<?php foreach($items as $value => $label): ?>
+<label>
+<?php if(is_null($label)): ?>
+<input <?php $label=$value;foreach($attributes as $name => $attr): ?><?php echo $name;?>="<?php echo $attr; ?>" <?php endforeach; ?>value="<?php echo $value; ?>" <?php if($selected == $value): ?>checked="checked" <?php endif; ?>/>
+<?php else: ?>
+<input <?php foreach($attributes as $name => $attr): ?><?php echo $name;?>="<?php echo $attr; ?>" <?php endforeach; ?>value="<?php echo $value; ?>" <?php if($selected == $value): ?>checked="checked" <?php endif; ?>/>
+<?php endif; ?>
+<span><?php echo $label; ?></span>
+</label>
+<?php endforeach; ?>

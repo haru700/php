@@ -1,0 +1,19 @@
+<ul<?php foreach($attributes as $name => $value): ?> <?php echo $name;?>="<?php echo $value; ?>"<?php endforeach; ?>>
+	<?php foreach($node->children as $child): ?>
+	<li title="<?php echo $child->key; ?>" class="ui-state-default <?php echo !empty($child->children) ? 'eve-block-navigation-branch':'eve-block-navigation-leaf'; ?>">
+		<div class="eve-block-navigation-item ui-helper-clearfix<?php echo $child->type ? '': ' eve-block-navigation-no-type'; ?>">
+			<?php if($child->type): ?>
+			<span class="eve-block-navigation-icon ui-icon <?php echo $child->type; ?>"></span>
+			<?php endif; ?>
+			<?php if(!empty($child->children)): ?>
+			<span class="eve-block-navigation-more ui-icon ui-icon-triangle-1-e"></span>
+			<?php endif; ?>
+			<a title="<?php echo $child->label; ?>" class="eve-block-navigation-label" 
+			href="<?php echo $root.$child->href; ?>"><?php echo $child->label; ?></a>
+		</div>
+		<?php if(!empty($child->children)): ?>
+		<?php echo jquery()->Jquery_Block_Navigation($root, $child); ?>
+		<?php endif; ?>
+	</li>
+	<?php endforeach; ?>
+</ul>

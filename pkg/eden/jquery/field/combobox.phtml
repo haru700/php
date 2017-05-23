@@ -1,0 +1,6 @@
+<?php echo jquery()->field()->select($name, $value, $items)->setAttributes($attributes); ?>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<script type="text/javascript" src="/assets/jquery/field/combobox.js"></script>
+<?php endif; ?>
+<script type="text/javascript">jQuery('select.eve-field-combobox').not('.eve-field-loaded').addClass('eve-field-loaded').combobox(<?php echo json_encode($options); ?>);</script>

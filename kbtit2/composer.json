@@ -1,0 +1,10 @@
+{
+  "require":{
+    "dropbox-php/dropbox-php" : "1.*",
+    "dropbox/dropbox-sdk" : "1.1.*",
+    "vlucas/bulletphp": "*",
+    "evernote/evernote": "1.23.*",
+    "knplabs/github-api": "*"
+  },
+  "minumub-stability" : "dev"
+}

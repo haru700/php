@@ -1,0 +1,79 @@
+.eve-block-navigation { 
+	padding: 0;
+	position: relative;
+	z-index: 99999; 
+}
+
+.eve-block-navigation ul { }
+
+.eve-block-navigation li { 
+	float: left;
+	list-style: none; 
+	position: relative;
+}
+
+.eve-block-navigation li ul { 
+	display: none; 
+	left: 0;
+	position: absolute;
+	top: 25px;
+	width: 200px;
+}
+.eve-block-navigation li li { 
+	float: none;
+	white-space: nowrap;
+}
+
+.eve-block-navigation li ul ul {
+	left: 200px;
+	top: 0;
+} 
+
+.eve-block-navigation .eve-block-navigation-body { border: 0; }
+
+.eve-block-navigation .eve-block-navigation-item {
+	border: 0; 
+	float: none;
+	cursor: pointer;
+	margin-bottom: -1px;
+	overflow: hidden;
+	position: relative;
+}
+.eve-block-navigation .eve-block-navigation-icon { 
+	margin: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.eve-block-navigation .eve-block-navigation-more { display: none; }
+.eve-block-navigation li li .eve-block-navigation-more { 
+	display: block;
+	margin: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.eve-block-navigation .eve-block-navigation-label,
+.eve-block-navigation .eve-block-navigation-label:link,
+.eve-block-navigation .eve-block-navigation-label:active,
+.eve-block-navigation .eve-block-navigation-label:visited  {
+	background-color: #EFEFEF; 
+	border: 0;
+	color: #232323;
+	cursor: pointer;
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 26px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.eve-block-navigation .eve-block-navigation-no-type .eve-block-navigation-label,
+.eve-block-navigation .eve-block-navigation-no-type .eve-block-navigation-label:link,
+.eve-block-navigation .eve-block-navigation-no-type .eve-block-navigation-label:active,
+.eve-block-navigation .eve-block-navigation-no-type .eve-block-navigation-label:visited  {
+	margin-left: 0;
+}

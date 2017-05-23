@@ -1,0 +1,13 @@
+<div class="eve-block-panel">
+	<div class="ui-layout-center"><?php echo $panels[0]; ?></div>
+	<?php if($panels[1]): ?><div class="ui-layout-north"><?php echo $panels[1]; ?></div><?php endif; ?>
+	<?php if($panels[4]): ?><div class="ui-layout-west"><?php echo $panels[4]; ?></div><?php endif; ?>
+	<?php if($panels[3]): ?><div class="ui-layout-east"><?php echo $panels[3]; ?></div><?php endif; ?>
+	<?php if($panels[2]): ?><div class="ui-layout-south"><?php echo $panels[2]; ?></div><?php endif; ?>
+</div>
+<?php if(!$loaded): ?>
+<?php echo jquery()->jqueryui($theme); ?>
+<link rel="stylesheet" type="text/css" href="/assets/jquery/block/panel.css" />
+<script type="text/javascript" src="/assets/jquery/block/panel.js"></script>
+<?php endif; ?>
+<script type="text/javascript">jQuery('div.eve-block-panel').not('.eve-block-loaded').addClass('eve-block-loaded').each(function() {$(this).data('eve-block-panel', $(this).layout(<?php echo json_encode($options); ?>));});</script>

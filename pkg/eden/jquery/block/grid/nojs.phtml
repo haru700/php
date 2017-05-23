@@ -1,0 +1,51 @@
+<div title="<?php echo htmlspecialchars($row[$column['key']], ENT_QUOTES); ?>" 
+class="eve-block-grid-column<?php echo $j < $options['pin'] ? ' eve-block-grid-pin':''; ?>" 
+style="width:<?php echo $column['width']; ?>px">
+	<span class="eve-block-grid-label<?php echo $j < $options['pin'] ? ' ui-state-default':''; ?>">
+	<?php if(is_numeric($row[$column['key']])): ?>
+	<?php echo $column['prefix'].number_format(
+		$row[$column['key']], 
+		$column['places'], 
+		$column['decimal'], 
+		$column['separator']); ?>
+	<?php else: ?>
+	<?php echo strip_tags($row[$column['key']]); ?>
+	<?php endif; ?>
+	</span>
+	<span class="eve-block-grid-field<?php echo $j < $options['pin'] ? ' ui-state-default':''; ?>">
+	<?php if($column['field'] == 'select'): ?>
+	<?php echo jquery()->field()
+		->select($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES), $column['options'])
+		->setAttributes('class', 'eve-block-grid-select'); ?>
+	<?php elseif($column['field'] == 'textarea'): ?>
+	<?php echo jquery()->field()
+		->textarea($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES))
+		->setAttributes('class', 'time eve-block-grid-textarea'); ?>
+	<?php elseif($column['field'] == 'wysiwyg'): ?>
+	<?php echo jquery()->field()
+		->textarea($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES))
+		->setAttributes('class', 'eve-block-grid-wysiwyg')
+		->setAttributes('id', 'eve-block-grid-wysiwyg'.jquery()->uid()); ?>
+	<?php elseif($column['field'] == 'time'): ?>
+	<?php echo jquery()->field()
+		->time($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES))
+		->setAttributes('class', 'text time eve-block-grid-text'); ?>
+	<?php elseif($column['field'] == 'date'): ?>
+	<?php echo jquery()->field()
+		->date($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES))
+		->setAttributes('class', 'text date eve-block-grid-text'); ?>
+	<?php elseif($column['field'] == 'datetime'): ?>
+	<?php echo jquery()->field()
+		->datetime($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES))
+		->setAttributes('class', 'text datetime eve-block-grid-text'); ?>
+	<?php elseif($column['field']): ?>
+	<?php echo jquery()->field()
+		->text($column['key'], htmlspecialchars($row[$column['key']], ENT_QUOTES))
+		->setAttributes('class', 'eve-block-grid-text'); ?>
+	<?php else: ?>
+	<span class="eve-block-grid-no-field">
+	<?php echo htmlspecialchars($row[$column['key']], ENT_QUOTES); ?>
+	</span>
+	<?php endif; ?>
+	</span>
+</div>
